@@ -1,0 +1,11 @@
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.csprojAssemblyReference.cache
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.AuthorizationForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.Properties.Resources.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.csproj.GenerateResource.cache
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.csproj.CoreCompileInputs.cache
+D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\AIS_ComputerBYTE.exe.config
+D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\AIS_ComputerBYTE.exe
+D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\AIS_ComputerBYTE.pdb
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.exe
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.pdb
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.MainMenuForm.resources
