@@ -33,6 +33,13 @@ namespace AIS_ComputerBYTE
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.userNameLable = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.changeEmployee = new System.Windows.Forms.Label();
+            this.registrationButton = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -86,21 +93,98 @@ namespace AIS_ComputerBYTE
             this.button2.Text = "Ассортимент";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.userNameLable);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(458, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(359, 165);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Пользователь";
+            // 
+            // userNameLable
+            // 
+            this.userNameLable.AutoSize = true;
+            this.userNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userNameLable.Location = new System.Drawing.Point(103, 34);
+            this.userNameLable.Name = "userNameLable";
+            this.userNameLable.Size = new System.Drawing.Size(54, 24);
+            this.userNameLable.TabIndex = 1;
+            this.userNameLable.Text = "ФИО";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(91, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // changeEmployee
+            // 
+            this.changeEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.changeEmployee.AutoSize = true;
+            this.changeEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.changeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeEmployee.ForeColor = System.Drawing.Color.White;
+            this.changeEmployee.Location = new System.Drawing.Point(541, 180);
+            this.changeEmployee.Name = "changeEmployee";
+            this.changeEmployee.Size = new System.Drawing.Size(199, 24);
+            this.changeEmployee.TabIndex = 2;
+            this.changeEmployee.Text = "Смена пользователя";
+            this.changeEmployee.Click += new System.EventHandler(this.changeEmployee_Click);
+            // 
+            // registrationButton
+            // 
+            this.registrationButton.BackColor = System.Drawing.Color.Transparent;
+            this.registrationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.registrationButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.registrationButton.FlatAppearance.BorderSize = 3;
+            this.registrationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.registrationButton.Location = new System.Drawing.Point(12, 19);
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.Size = new System.Drawing.Size(305, 70);
+            this.registrationButton.TabIndex = 13;
+            this.registrationButton.Text = "Регистрация";
+            this.registrationButton.UseVisualStyleBackColor = false;
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(805, 524);
+            this.ClientSize = new System.Drawing.Size(829, 535);
+            this.Controls.Add(this.registrationButton);
+            this.Controls.Add(this.changeEmployee);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenuForm";
             this.Text = "Главное меню";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +193,10 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label changeEmployee;
+        private System.Windows.Forms.Label userNameLable;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button registrationButton;
     }
 }
