@@ -32,7 +32,7 @@ namespace AIS_ComputerBYTE
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.assortmentButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userNameLable = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -76,22 +76,23 @@ namespace AIS_ComputerBYTE
             this.button4.Text = "Сотрудники";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // assortmentButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(56, 314);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(301, 60);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Ассортимент";
-            this.button2.UseVisualStyleBackColor = false;
+            this.assortmentButton.BackColor = System.Drawing.Color.Transparent;
+            this.assortmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.assortmentButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.assortmentButton.FlatAppearance.BorderSize = 3;
+            this.assortmentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.assortmentButton.Location = new System.Drawing.Point(56, 314);
+            this.assortmentButton.Name = "assortmentButton";
+            this.assortmentButton.Size = new System.Drawing.Size(301, 60);
+            this.assortmentButton.TabIndex = 9;
+            this.assortmentButton.Text = "Ассортимент";
+            this.assortmentButton.UseVisualStyleBackColor = false;
+            this.assortmentButton.Click += new System.EventHandler(this.assortmentButton_Click);
             // 
             // groupBox1
             // 
@@ -105,7 +106,7 @@ namespace AIS_ComputerBYTE
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(458, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 165);
+            this.groupBox1.Size = new System.Drawing.Size(359, 180);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Пользователь";
@@ -114,7 +115,7 @@ namespace AIS_ComputerBYTE
             // 
             this.userNameLable.AutoSize = true;
             this.userNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userNameLable.Location = new System.Drawing.Point(103, 34);
+            this.userNameLable.Location = new System.Drawing.Point(103, 49);
             this.userNameLable.Name = "userNameLable";
             this.userNameLable.Size = new System.Drawing.Size(54, 24);
             this.userNameLable.TabIndex = 1;
@@ -124,7 +125,7 @@ namespace AIS_ComputerBYTE
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 34);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(91, 97);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -136,11 +137,11 @@ namespace AIS_ComputerBYTE
             this.changeEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.changeEmployee.AutoSize = true;
             this.changeEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.changeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changeEmployee.ForeColor = System.Drawing.Color.White;
-            this.changeEmployee.Location = new System.Drawing.Point(541, 180);
+            this.changeEmployee.Location = new System.Drawing.Point(561, 195);
             this.changeEmployee.Name = "changeEmployee";
-            this.changeEmployee.Size = new System.Drawing.Size(199, 24);
+            this.changeEmployee.Size = new System.Drawing.Size(171, 20);
             this.changeEmployee.TabIndex = 2;
             this.changeEmployee.Text = "Смена пользователя";
             this.changeEmployee.Click += new System.EventHandler(this.changeEmployee_Click);
@@ -155,9 +156,9 @@ namespace AIS_ComputerBYTE
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrationButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.registrationButton.Location = new System.Drawing.Point(12, 19);
+            this.registrationButton.Location = new System.Drawing.Point(12, 12);
             this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(305, 70);
+            this.registrationButton.Size = new System.Drawing.Size(213, 73);
             this.registrationButton.TabIndex = 13;
             this.registrationButton.Text = "Регистрация";
             this.registrationButton.UseVisualStyleBackColor = false;
@@ -168,13 +169,13 @@ namespace AIS_ComputerBYTE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(829, 535);
+            this.ClientSize = new System.Drawing.Size(829, 508);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.changeEmployee);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.assortmentButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -192,7 +193,7 @@ namespace AIS_ComputerBYTE
 
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button assortmentButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label changeEmployee;
         private System.Windows.Forms.Label userNameLable;

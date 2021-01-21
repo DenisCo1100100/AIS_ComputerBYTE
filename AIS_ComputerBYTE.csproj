@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerByteDataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerByteDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingComputerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingComputerForm.Designer.cs">
+      <DependentUpon>AddingComputerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssortmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssortmentForm.Designer.cs">
+      <DependentUpon>AssortmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +78,13 @@
     <Compile Include="Model\Authorization\Authentication.cs" />
     <Compile Include="Model\Authorization\BaseConection.cs" />
     <Compile Include="Model\Authorization\Registration.cs" />
+    <Compile Include="Model\DataGridViewControll.cs" />
+    <Compile Include="Model\TableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AssortmentForm.resx">
+      <DependentUpon>AssortmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +100,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\AIS_ComputerBYTE.exe.config" />
+    <None Include="bin\Debug\ComputerByteDataBase.ldb" />
+    <None Include="ComputerByteDataBaseDataSet.xsc">
+      <DependentUpon>ComputerByteDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComputerByteDataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet.xss">
+      <DependentUpon>ComputerByteDataBaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,7 +127,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Release\" />
     <Folder Include="Design\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AIS_ComputerBYTE.exe" />
+    <Content Include="bin\Debug\AIS_ComputerBYTE.pdb" />
+    <Content Include="bin\Debug\ComputerByteDataBase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\ComputerImages\0.jpeg" />
+    <Content Include="bin\Debug\ComputerImages\1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

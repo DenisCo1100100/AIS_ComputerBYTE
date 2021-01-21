@@ -9,3 +9,5 @@ D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\AIS_ComputerBYTE.pdb
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.exe
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.pdb
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.MainMenuForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.AssortmentForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\bin\Debug\ComputerByteDataBase.mdb

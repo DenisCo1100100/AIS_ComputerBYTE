@@ -25,8 +25,8 @@ namespace AIS_ComputerBYTE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Authentication authentication = new Authentication(Login, Password);
-            //Authentication authentication = new Authentication("Admin2", "2222");
+            //Authentication authentication = new Authentication(Login, Password);
+            Authentication authentication = new Authentication("Admin2", "2222");
             authentication.Execute();
             authentication.RunAuthentication();
         }
