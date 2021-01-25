@@ -82,6 +82,9 @@
     <Compile Include="Model\TableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddingComputerForm.resx">
+      <DependentUpon>AddingComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AssortmentForm.resx">
       <DependentUpon>AssortmentForm.cs</DependentUpon>
     </EmbeddedResource>
