@@ -45,9 +45,15 @@ namespace AIS_ComputerBYTE
         {
             new AssortmentForm().ShowDialog();
         }
+
         private void changeEmployee_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+            new EmployeManagmentForm().ShowDialog();
         }
     }
 }

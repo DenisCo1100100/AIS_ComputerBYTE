@@ -31,7 +31,6 @@ namespace AIS_ComputerBYTE
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.assortmentButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userNameLable = new System.Windows.Forms.Label();
@@ -58,23 +57,6 @@ namespace AIS_ComputerBYTE
             this.button5.TabIndex = 11;
             this.button5.Text = "Клиенты";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(56, 393);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(301, 60);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Сотрудники";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // assortmentButton
             // 
@@ -156,12 +138,13 @@ namespace AIS_ComputerBYTE
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrationButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.registrationButton.Location = new System.Drawing.Point(12, 12);
+            this.registrationButton.Location = new System.Drawing.Point(83, 61);
             this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(213, 73);
+            this.registrationButton.Size = new System.Drawing.Size(286, 90);
             this.registrationButton.TabIndex = 13;
-            this.registrationButton.Text = "Регистрация";
+            this.registrationButton.Text = "Управление сотрудниками";
             this.registrationButton.UseVisualStyleBackColor = false;
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // MainMenuForm
             // 
@@ -174,7 +157,6 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.changeEmployee);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.assortmentButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
@@ -192,7 +174,6 @@ namespace AIS_ComputerBYTE
         #endregion
 
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button assortmentButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label changeEmployee;

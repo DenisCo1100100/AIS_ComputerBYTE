@@ -12,3 +12,5 @@ D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.MainMenuForm.res
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.AssortmentForm.resources
 D:\Serious Projects\AIS_ComputerBYTE\bin\Debug\bin\Debug\ComputerByteDataBase.mdb
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.AddingComputerForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.EmployeManagmentForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.RegistrationEmployeesForm.resources
