@@ -22,10 +22,10 @@ namespace AIS_ComputerBYTE
 
             while (reader.Read())
             {
-                loadLogin = reader.GetString(0);
-                Position = reader.GetString(2);
-                FullName = reader.GetString(3);
-                lvlAccses = reader.GetInt32(7);
+                loadLogin = reader.GetString(1);
+                Position = reader.GetString(3);
+                FullName = reader.GetString(4);
+                lvlAccses = reader.GetInt32(8);
             }
 
             OleDbConnect.Close();

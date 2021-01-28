@@ -279,6 +279,12 @@ namespace AIS_ComputerBYTE {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EmployeesDataTable : global::System.Data.TypedTableBase<EmployeesRow> {
             
+            private global::System.Data.DataColumn columnКод;
+            
+            private global::System.Data.DataColumn columnЛогин;
+            
+            private global::System.Data.DataColumn columnПароль;
+            
             private global::System.Data.DataColumn columnДолжность;
             
             private global::System.Data.DataColumn columnПолное_имя;
@@ -332,6 +338,30 @@ namespace AIS_ComputerBYTE {
             protected EmployeesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn КодColumn {
+                get {
+                    return this.columnКод;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ЛогинColumn {
+                get {
+                    return this.columnЛогин;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ПарольColumn {
+                get {
+                    return this.columnПароль;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -459,9 +489,12 @@ namespace AIS_ComputerBYTE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow AddEmployeesRow(string Должность, string Полное_имя, int Номер_паспорта, int Возраст, string Адрес, int Уровень_доступа, int Полученная_прибыль, int Заработная_плата, int Стаж, string Образование, string Уровень_доверия) {
+            public EmployeesRow AddEmployeesRow(string Логин, string Пароль, string Должность, string Полное_имя, int Номер_паспорта, int Возраст, string Адрес, int Уровень_доступа, int Полученная_прибыль, int Заработная_плата, int Стаж, string Образование, string Уровень_доверия) {
                 EmployeesRow rowEmployeesRow = ((EmployeesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
+                        Логин,
+                        Пароль,
                         Должность,
                         Полное_имя,
                         Номер_паспорта,
@@ -495,6 +528,9 @@ namespace AIS_ComputerBYTE {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnКод = base.Columns["Код"];
+                this.columnЛогин = base.Columns["Логин"];
+                this.columnПароль = base.Columns["Пароль"];
                 this.columnДолжность = base.Columns["Должность"];
                 this.columnПолное_имя = base.Columns["Полное имя"];
                 this.columnНомер_паспорта = base.Columns["Номер паспорта"];
@@ -511,6 +547,12 @@ namespace AIS_ComputerBYTE {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnКод = new global::System.Data.DataColumn("Код", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКод);
+                this.columnЛогин = new global::System.Data.DataColumn("Логин", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЛогин);
+                this.columnПароль = new global::System.Data.DataColumn("Пароль", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПароль);
                 this.columnДолжность = new global::System.Data.DataColumn("Должность", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДолжность);
                 this.columnПолное_имя = new global::System.Data.DataColumn("Полное имя", typeof(string), null, global::System.Data.MappingType.Element);
@@ -533,6 +575,11 @@ namespace AIS_ComputerBYTE {
                 base.Columns.Add(this.columnОбразование);
                 this.columnУровень_доверия = new global::System.Data.DataColumn("Уровень_доверия", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnУровень_доверия);
+                this.columnКод.AutoIncrement = true;
+                this.columnКод.AutoIncrementSeed = -1;
+                this.columnКод.AutoIncrementStep = -1;
+                this.columnЛогин.MaxLength = 255;
+                this.columnПароль.MaxLength = 255;
                 this.columnДолжность.MaxLength = 255;
                 this.columnПолное_имя.MaxLength = 255;
                 this.columnАдрес.MaxLength = 255;
@@ -676,6 +723,54 @@ namespace AIS_ComputerBYTE {
             internal EmployeesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableEmployees = ((EmployeesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Код {
+                get {
+                    try {
+                        return ((int)(this[this.tableEmployees.КодColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код\' в таблице \'Employees\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployees.КодColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Логин {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployees.ЛогинColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Логин\' в таблице \'Employees\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployees.ЛогинColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Пароль {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployees.ПарольColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Пароль\' в таблице \'Employees\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployees.ПарольColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -852,6 +947,42 @@ namespace AIS_ComputerBYTE {
                 set {
                     this[this.tableEmployees.Уровень_доверияColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsКодNull() {
+                return this.IsNull(this.tableEmployees.КодColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetКодNull() {
+                this[this.tableEmployees.КодColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsЛогинNull() {
+                return this.IsNull(this.tableEmployees.ЛогинColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetЛогинNull() {
+                this[this.tableEmployees.ЛогинColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsПарольNull() {
+                return this.IsNull(this.tableEmployees.ПарольColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetПарольNull() {
+                this[this.tableEmployees.ПарольColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1146,6 +1277,9 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Employees";
+            tableMapping.ColumnMappings.Add("Код", "Код");
+            tableMapping.ColumnMappings.Add("Логин", "Логин");
+            tableMapping.ColumnMappings.Add("Пароль", "Пароль");
             tableMapping.ColumnMappings.Add("Должность", "Должность");
             tableMapping.ColumnMappings.Add("Полное имя", "Полное имя");
             tableMapping.ColumnMappings.Add("Номер паспорта", "Номер паспорта");
@@ -1160,10 +1294,10 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Employees` (`Должность`, `Полное имя`, `Номер паспорта`, `Возраст`, " +
-                "`Адрес`, `Уровень доступа`, `Полученная_прибыль`, `Заработная_плата`, `Стаж`, `О" +
-                "бразование`, `Уровень_доверия`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Employees` (`Логин`, `Пароль`, `Должность`, `Полное имя`, `Номер паспорта`, `Возраст`, `Адрес`, `Уровень доступа`, `Полученная_прибыль`, `Заработная_плата`, `Стаж`, `Образование`, `Уровень_доверия`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Логин", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Логин", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пароль", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пароль", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Полное_имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Полное имя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_паспорта", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер паспорта", global::System.Data.DataRowVersion.Current, false, null));
@@ -1190,9 +1324,9 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Должность, [Полное имя], [Номер паспорта], Возраст, Адрес, [Уровень доступ" +
-                "а], Полученная_прибыль, Заработная_плата, Стаж, Образование, Уровень_доверия FRO" +
-                "M Employees";
+            this._commandCollection[0].CommandText = "SELECT Код, Логин, Пароль, Должность, [Полное имя], [Номер паспорта], Возраст, Ад" +
+                "рес, [Уровень доступа], Полученная_прибыль, Заработная_плата, Стаж, Образование," +
+                " Уровень_доверия FROM Employees";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1253,72 +1387,84 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Должность, string Полное_имя, global::System.Nullable<int> Номер_паспорта, global::System.Nullable<int> Возраст, string Адрес, global::System.Nullable<int> Уровень_доступа, global::System.Nullable<int> Полученная_прибыль, global::System.Nullable<int> Заработная_плата, global::System.Nullable<int> Стаж, string Образование, string Уровень_доверия) {
-            if ((Должность == null)) {
+        public virtual int Insert(string Логин, string Пароль, string Должность, string Полное_имя, global::System.Nullable<int> Номер_паспорта, global::System.Nullable<int> Возраст, string Адрес, global::System.Nullable<int> Уровень_доступа, global::System.Nullable<int> Полученная_прибыль, global::System.Nullable<int> Заработная_плата, global::System.Nullable<int> Стаж, string Образование, string Уровень_доверия) {
+            if ((Логин == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Должность));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Логин));
             }
-            if ((Полное_имя == null)) {
+            if ((Пароль == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Полное_имя));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Пароль));
             }
-            if ((Номер_паспорта.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Номер_паспорта.Value));
-            }
-            else {
+            if ((Должность == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Возраст.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Возраст.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Должность));
+            }
+            if ((Полное_имя == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Адрес == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Полное_имя));
+            }
+            if ((Номер_паспорта.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Номер_паспорта.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Адрес));
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Уровень_доступа.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Уровень_доступа.Value));
+            if ((Возраст.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Возраст.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Полученная_прибыль.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Полученная_прибыль.Value));
-            }
-            else {
+            if ((Адрес == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Заработная_плата.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Заработная_плата.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Адрес));
+            }
+            if ((Уровень_доступа.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Уровень_доступа.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Стаж.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Стаж.Value));
+            if ((Полученная_прибыль.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Полученная_прибыль.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Образование == null)) {
+            if ((Заработная_плата.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Заработная_плата.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Образование));
+            if ((Стаж.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Стаж.Value));
             }
-            if ((Уровень_доверия == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
+            if ((Образование == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Уровень_доверия));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Образование));
+            }
+            if ((Уровень_доверия == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Уровень_доверия));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
