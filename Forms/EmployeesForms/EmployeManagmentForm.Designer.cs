@@ -31,12 +31,6 @@ namespace AIS_ComputerBYTE
         {
             this.components = new System.ComponentModel.Container();
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.assortmentButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
-            this.computerByteDataBaseDataSet1 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet1();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters.EmployeesTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.парольDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +45,21 @@ namespace AIS_ComputerBYTE
             this.стажDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.образованиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.уровеньдоверияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.computerByteDataBaseDataSet1 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet1();
+            this.assortmentButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.employeesTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet1TableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // employeesDataGridView
             // 
+            this.employeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.employeesDataGridView.AutoGenerateColumns = false;
             this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -81,74 +83,6 @@ namespace AIS_ComputerBYTE
             this.employeesDataGridView.Size = new System.Drawing.Size(913, 319);
             this.employeesDataGridView.TabIndex = 0;
             this.employeesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellClick);
-            // 
-            // assortmentButton
-            // 
-            this.assortmentButton.BackColor = System.Drawing.Color.Transparent;
-            this.assortmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.assortmentButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.assortmentButton.FlatAppearance.BorderSize = 3;
-            this.assortmentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.assortmentButton.Location = new System.Drawing.Point(12, 337);
-            this.assortmentButton.Name = "assortmentButton";
-            this.assortmentButton.Size = new System.Drawing.Size(261, 75);
-            this.assortmentButton.TabIndex = 10;
-            this.assortmentButton.Text = "Зарегистрировать";
-            this.assortmentButton.UseVisualStyleBackColor = false;
-            this.assortmentButton.Click += new System.EventHandler(this.assortmentButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.deleteButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.deleteButton.FlatAppearance.BorderSize = 3;
-            this.deleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.deleteButton.Location = new System.Drawing.Point(350, 337);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(272, 75);
-            this.deleteButton.TabIndex = 11;
-            this.deleteButton.Text = "Удалить";
-            this.deleteButton.UseVisualStyleBackColor = false;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.backButton.FlatAppearance.BorderSize = 3;
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backButton.Location = new System.Drawing.Point(694, 337);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(231, 75);
-            this.backButton.TabIndex = 12;
-            this.backButton.Text = "Назад";
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // computerByteDataBaseDataSet1
-            // 
-            this.computerByteDataBaseDataSet1.DataSetName = "ComputerByteDataBaseDataSet1";
-            this.computerByteDataBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this.computerByteDataBaseDataSet1;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -234,12 +168,83 @@ namespace AIS_ComputerBYTE
             this.уровеньдоверияDataGridViewTextBoxColumn.HeaderText = "Уровень_доверия";
             this.уровеньдоверияDataGridViewTextBoxColumn.Name = "уровеньдоверияDataGridViewTextBoxColumn";
             // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.computerByteDataBaseDataSet1;
+            // 
+            // computerByteDataBaseDataSet1
+            // 
+            this.computerByteDataBaseDataSet1.DataSetName = "ComputerByteDataBaseDataSet1";
+            this.computerByteDataBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // assortmentButton
+            // 
+            this.assortmentButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.assortmentButton.BackColor = System.Drawing.Color.Transparent;
+            this.assortmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.assortmentButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.assortmentButton.FlatAppearance.BorderSize = 3;
+            this.assortmentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.assortmentButton.Location = new System.Drawing.Point(12, 349);
+            this.assortmentButton.Name = "assortmentButton";
+            this.assortmentButton.Size = new System.Drawing.Size(261, 75);
+            this.assortmentButton.TabIndex = 10;
+            this.assortmentButton.Text = "Зарегистрировать";
+            this.assortmentButton.UseVisualStyleBackColor = false;
+            this.assortmentButton.Click += new System.EventHandler(this.assortmentButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteButton.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.deleteButton.FlatAppearance.BorderSize = 3;
+            this.deleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.deleteButton.Location = new System.Drawing.Point(350, 349);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(272, 75);
+            this.deleteButton.TabIndex = 11;
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.backButton.FlatAppearance.BorderSize = 3;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.backButton.Location = new System.Drawing.Point(694, 349);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(231, 75);
+            this.backButton.TabIndex = 12;
+            this.backButton.Text = "Назад";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
             // EmployeManagmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(937, 424);
+            this.ClientSize = new System.Drawing.Size(937, 440);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.assortmentButton);
@@ -248,8 +253,8 @@ namespace AIS_ComputerBYTE
             this.Text = "Управление сотрудниками";
             this.Load += new System.EventHandler(this.EmployeManagmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

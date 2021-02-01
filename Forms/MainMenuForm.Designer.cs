@@ -30,33 +30,36 @@ namespace AIS_ComputerBYTE
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
-            this.button5 = new System.Windows.Forms.Button();
+            this.clientsButton = new System.Windows.Forms.Button();
             this.assortmentButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userNameLable = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.changeEmployee = new System.Windows.Forms.Label();
             this.registrationButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // clientsButton
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.FlatAppearance.BorderSize = 3;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(451, 314);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(301, 60);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Клиенты";
-            this.button5.UseVisualStyleBackColor = false;
+            this.clientsButton.BackColor = System.Drawing.Color.Transparent;
+            this.clientsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.clientsButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.clientsButton.FlatAppearance.BorderSize = 3;
+            this.clientsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.clientsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clientsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.clientsButton.Location = new System.Drawing.Point(464, 326);
+            this.clientsButton.Name = "clientsButton";
+            this.clientsButton.Size = new System.Drawing.Size(301, 60);
+            this.clientsButton.TabIndex = 11;
+            this.clientsButton.Text = "Клиенты";
+            this.clientsButton.UseVisualStyleBackColor = false;
+            this.clientsButton.Click += new System.EventHandler(this.clientsButton_Click);
             // 
             // assortmentButton
             // 
@@ -68,7 +71,7 @@ namespace AIS_ComputerBYTE
             this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.assortmentButton.Location = new System.Drawing.Point(56, 314);
+            this.assortmentButton.Location = new System.Drawing.Point(69, 326);
             this.assortmentButton.Name = "assortmentButton";
             this.assortmentButton.Size = new System.Drawing.Size(301, 60);
             this.assortmentButton.TabIndex = 9;
@@ -146,6 +149,40 @@ namespace AIS_ComputerBYTE
             this.registrationButton.UseVisualStyleBackColor = false;
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(69, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 60);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Статистика";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(464, 421);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(301, 60);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Прогнозы";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,10 +190,12 @@ namespace AIS_ComputerBYTE
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(829, 508);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.changeEmployee);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.clientsButton);
             this.Controls.Add(this.assortmentButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
@@ -173,12 +212,14 @@ namespace AIS_ComputerBYTE
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button clientsButton;
         private System.Windows.Forms.Button assortmentButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label changeEmployee;
         private System.Windows.Forms.Label userNameLable;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button registrationButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -56,16 +56,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ComputerByteDataBaseDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddingComputerForm.cs">
+    <Compile Include="ComputerByteDataBaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerByteDataBaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssortmentForms\AddingComputerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddingComputerForm.Designer.cs">
+    <Compile Include="Forms\AssortmentForms\AddingComputerForm.Designer.cs">
       <DependentUpon>AddingComputerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AssortmentForm.cs">
+    <Compile Include="Forms\AssortmentForms\AssortmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AssortmentForm.Designer.cs">
+    <Compile Include="Forms\AssortmentForms\AssortmentForm.Designer.cs">
       <DependentUpon>AssortmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AuthorizationForm.cs">
@@ -73,6 +78,18 @@
     </Compile>
     <Compile Include="Forms\AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientsForms\AddingClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientsForms\AddingClientsForm.Designer.cs">
+      <DependentUpon>AddingClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientsForms\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientsForms\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EmployeesForms\EmployeManagmentForm.cs">
       <SubType>Form</SubType>
@@ -99,14 +116,20 @@
     <Compile Include="Model\TableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AddingComputerForm.resx">
+    <EmbeddedResource Include="Forms\AssortmentForms\AddingComputerForm.resx">
       <DependentUpon>AddingComputerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AssortmentForm.resx">
+    <EmbeddedResource Include="Forms\AssortmentForms\AssortmentForm.resx">
       <DependentUpon>AssortmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientsForms\AddingClientsForm.resx">
+      <DependentUpon>AddingClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientsForms\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeesForms\EmployeManagmentForm.resx">
       <DependentUpon>EmployeManagmentForm.cs</DependentUpon>
@@ -149,6 +172,17 @@
     </None>
     <None Include="ComputerByteDataBaseDataSet1.xss">
       <DependentUpon>ComputerByteDataBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet2.xsc">
+      <DependentUpon>ComputerByteDataBaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComputerByteDataBaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet2.xss">
+      <DependentUpon>ComputerByteDataBaseDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

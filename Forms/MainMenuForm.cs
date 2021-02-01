@@ -55,5 +55,10 @@ namespace AIS_ComputerBYTE
         {
             new EmployeManagmentForm().ShowDialog();
         }
+
+        private void clientsButton_Click(object sender, EventArgs e)
+        {
+            new ClientsForm().ShowDialog();
+        }
     }
 }
