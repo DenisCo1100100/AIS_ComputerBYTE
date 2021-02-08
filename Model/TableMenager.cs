@@ -21,18 +21,18 @@ namespace AIS_ComputerBYTE
             OleDbConnect.Close();
         }
 
-        public int[] SelectInDB(string request)
+        public string[] SelectInDB(string request)
         {
             OleDbConnect.Open();
             OleDbCommand cmd = new OleDbCommand(request, OleDbConnect);
             OleDbDataReader reader = cmd.ExecuteReader();
 
-            int[] getsStat = new int[reader.FieldCount];
+            string[] getsStat = new string[reader.FieldCount];
             while (reader.Read())
             {
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    getsStat[i] = reader.GetInt32(i);
+                    getsStat[i] = reader.GetValue(i).ToString();
                 }
             }
 

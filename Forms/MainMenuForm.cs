@@ -60,5 +60,10 @@ namespace AIS_ComputerBYTE
         {
             new ClientsForm().ShowDialog();
         }
+
+        private void statistickButton_Click(object sender, EventArgs e)
+        {
+            new StatisticksForm().ShowDialog();
+        }
     }
 }

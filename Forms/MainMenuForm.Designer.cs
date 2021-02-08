@@ -37,8 +37,9 @@ namespace AIS_ComputerBYTE
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.changeEmployee = new System.Windows.Forms.Label();
             this.registrationButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.statistickButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@ namespace AIS_ComputerBYTE
             this.clientsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clientsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.clientsButton.Location = new System.Drawing.Point(464, 326);
+            this.clientsButton.Location = new System.Drawing.Point(463, 293);
             this.clientsButton.Name = "clientsButton";
             this.clientsButton.Size = new System.Drawing.Size(301, 60);
             this.clientsButton.TabIndex = 11;
@@ -71,7 +72,7 @@ namespace AIS_ComputerBYTE
             this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.assortmentButton.Location = new System.Drawing.Point(69, 326);
+            this.assortmentButton.Location = new System.Drawing.Point(68, 293);
             this.assortmentButton.Name = "assortmentButton";
             this.assortmentButton.Size = new System.Drawing.Size(301, 60);
             this.assortmentButton.TabIndex = 9;
@@ -89,7 +90,7 @@ namespace AIS_ComputerBYTE
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(458, 12);
+            this.groupBox1.Location = new System.Drawing.Point(458, -18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(359, 180);
             this.groupBox1.TabIndex = 12;
@@ -124,7 +125,7 @@ namespace AIS_ComputerBYTE
             this.changeEmployee.BackColor = System.Drawing.Color.Transparent;
             this.changeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changeEmployee.ForeColor = System.Drawing.Color.White;
-            this.changeEmployee.Location = new System.Drawing.Point(561, 195);
+            this.changeEmployee.Location = new System.Drawing.Point(561, 165);
             this.changeEmployee.Name = "changeEmployee";
             this.changeEmployee.Size = new System.Drawing.Size(171, 20);
             this.changeEmployee.TabIndex = 2;
@@ -141,30 +142,31 @@ namespace AIS_ComputerBYTE
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrationButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.registrationButton.Location = new System.Drawing.Point(83, 61);
+            this.registrationButton.Location = new System.Drawing.Point(12, 29);
             this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(286, 90);
+            this.registrationButton.Size = new System.Drawing.Size(301, 90);
             this.registrationButton.TabIndex = 13;
             this.registrationButton.Text = "Управление сотрудниками";
             this.registrationButton.UseVisualStyleBackColor = false;
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
-            // button1
+            // statistickButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(69, 421);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(301, 60);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Статистика";
-            this.button1.UseVisualStyleBackColor = false;
+            this.statistickButton.BackColor = System.Drawing.Color.Transparent;
+            this.statistickButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.statistickButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.statistickButton.FlatAppearance.BorderSize = 3;
+            this.statistickButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.statistickButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statistickButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statistickButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.statistickButton.Location = new System.Drawing.Point(12, 137);
+            this.statistickButton.Name = "statistickButton";
+            this.statistickButton.Size = new System.Drawing.Size(301, 60);
+            this.statistickButton.TabIndex = 14;
+            this.statistickButton.Text = "Статистика";
+            this.statistickButton.UseVisualStyleBackColor = false;
+            this.statistickButton.Click += new System.EventHandler(this.statistickButton_Click);
             // 
             // button2
             // 
@@ -176,12 +178,29 @@ namespace AIS_ComputerBYTE
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(464, 421);
+            this.button2.Location = new System.Drawing.Point(463, 370);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(301, 60);
             this.button2.TabIndex = 15;
             this.button2.Text = "Прогнозы";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(68, 370);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(301, 60);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Продажи";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // MainMenuForm
             // 
@@ -189,9 +208,10 @@ namespace AIS_ComputerBYTE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(829, 508);
+            this.ClientSize = new System.Drawing.Size(829, 449);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.statistickButton);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.changeEmployee);
             this.Controls.Add(this.groupBox1);
@@ -219,7 +239,8 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.Label userNameLable;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button registrationButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button statistickButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
