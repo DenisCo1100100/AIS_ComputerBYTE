@@ -17,3 +17,4 @@ D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.RegistrationEmpl
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.ClientsForm.resources
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.AddingClientsForm.resources
 D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.StatisticksForm.resources
+D:\Serious Projects\AIS_ComputerBYTE\obj\Debug\AIS_ComputerBYTE.SaleComputersForm.resources

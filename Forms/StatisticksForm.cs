@@ -81,7 +81,6 @@ namespace AIS_ComputerBYTE
                 string[] statistick = _tableMenager.SelectInDB(request);
                 _dataToExcel = statistick;
 
-
                 PrintStatistick(statistick, fullChart, _months[i]);
             }
         }
@@ -90,7 +89,7 @@ namespace AIS_ComputerBYTE
         {
             if(_dataToExcel != null) 
             { 
-                new OutputToExcel().PrintStatistick(_dataToExcel, monthComboBox.SelectedItem.ToString());
+                new OutputToExcel("ШаблонСтатистики").PrintStatistick(_dataToExcel, monthComboBox.SelectedItem.ToString());
                 
                 _dataToExcel = null;
             }
@@ -135,7 +134,7 @@ namespace AIS_ComputerBYTE
         {
             if (_dataToExcel != null)
             {
-                new OutputToExcel().PrintStatistick(_dataToExcel, "Полный год");
+                new OutputToExcel("ШаблонСтатистики").PrintStatistick(_dataToExcel, "Полный год");
 
                 _dataToExcel = null;
             }

@@ -9,6 +9,12 @@ namespace AIS_ComputerBYTE
     {
         private string _dockName;
         private static int _dockNumber;
+        private string _nameExcelPattern;
+
+        public OutputToExcel(string nameExcelPattern)
+        {
+            _nameExcelPattern = nameExcelPattern;
+        }
 
         public void PrintStatistick(string[] dataPrint, string dockName)
         {
@@ -35,6 +41,33 @@ namespace AIS_ComputerBYTE
             xlApp.Quit();   
         }
 
+        public void PrintCheck(SaleComputersForm saleComputers)
+        {
+            _dockName = $"Чек! {saleComputers.FIO}";
+
+            Workbook xlWB = CreateAndGetWorkSheet(out Microsoft.Office.Interop.Excel.Application xlApp);
+            Worksheet xlSht = xlWB.ActiveSheet;
+
+            xlSht.Cells[2, "B"] = saleComputers.Monufacterer;
+            xlSht.Cells[3, "B"] = saleComputers.Motherboard;
+            xlSht.Cells[4, "B"] = saleComputers.PowerSupply;
+            xlSht.Cells[5, "B"] = saleComputers.VideoCard;
+            xlSht.Cells[6, "B"] = saleComputers.CPU;
+            xlSht.Cells[7, "B"] = saleComputers.OZU;
+            xlSht.Cells[8, "B"] = saleComputers.PZU;
+            xlSht.Cells[9, "B"] = saleComputers.Price;
+            xlSht.Cells[10, "B"] = saleComputers.Guarante;
+            xlSht.Cells[11, "B"] = saleComputers.ToPay;
+
+            xlSht.Cells[2, "E"] = saleComputers.FIO;
+            xlSht.Cells[3, "E"] = saleComputers.Pasport;
+            xlSht.Cells[4, "E"] = saleComputers.PhoneNumber;
+            xlSht.Cells[5, "E"] = saleComputers.Discount;
+
+            xlWB.Close(true);
+            xlApp.Quit();
+        }
+
         private Workbook CreateAndGetWorkSheet(out Microsoft.Office.Interop.Excel.Application xlApp)
         {
             xlApp = new Microsoft.Office.Interop.Excel.Application();
@@ -42,7 +75,7 @@ namespace AIS_ComputerBYTE
             Workbook xlWB2;
             Worksheet xlSht;
 
-            xlWB = xlApp.Workbooks.Open($@"{System.Windows.Forms.Application.StartupPath}/ШаблонСтатистики.xlsx");
+            xlWB = xlApp.Workbooks.Open($@"{System.Windows.Forms.Application.StartupPath}/{_nameExcelPattern}.xlsx");
             xlWB2 = xlApp.Workbooks.Add(System.Reflection.Missing.Value);
             xlSht = xlWB.Worksheets["Лист1"];
 

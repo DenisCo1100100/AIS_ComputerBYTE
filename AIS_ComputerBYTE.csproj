@@ -66,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ComputerByteDataBaseDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComputerByteDataBaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerByteDataBaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerByteDataBaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerByteDataBaseDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AssortmentForms\AddingComputerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +124,12 @@
     <Compile Include="Forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SaleComputers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaleComputers.Designer.cs">
+      <DependentUpon>SaleComputers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StatisticksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +139,7 @@
     <Compile Include="Model\Authorization\Authentication.cs" />
     <Compile Include="Model\Authorization\BaseConection.cs" />
     <Compile Include="Model\Authorization\Registration.cs" />
+    <Compile Include="Model\ColculateStatistick.cs" />
     <Compile Include="Model\DataGridViewControll.cs" />
     <Compile Include="Model\OutputToExcel.cs" />
     <Compile Include="Model\TableMenager.cs" />
@@ -151,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaleComputers.resx">
+      <DependentUpon>SaleComputers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatisticksForm.resx">
       <DependentUpon>StatisticksForm.cs</DependentUpon>
@@ -198,6 +218,28 @@
     </None>
     <None Include="ComputerByteDataBaseDataSet2.xss">
       <DependentUpon>ComputerByteDataBaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet3.xsc">
+      <DependentUpon>ComputerByteDataBaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComputerByteDataBaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet3.xss">
+      <DependentUpon>ComputerByteDataBaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet4.xsc">
+      <DependentUpon>ComputerByteDataBaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComputerByteDataBaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComputerByteDataBaseDataSet4.xss">
+      <DependentUpon>ComputerByteDataBaseDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

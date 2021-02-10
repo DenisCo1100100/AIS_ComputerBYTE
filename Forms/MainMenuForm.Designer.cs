@@ -39,7 +39,7 @@ namespace AIS_ComputerBYTE
             this.registrationButton = new System.Windows.Forms.Button();
             this.statistickButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.saleComputersButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -185,22 +185,23 @@ namespace AIS_ComputerBYTE
             this.button2.Text = "Прогнозы";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // saleComputersButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(68, 370);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(301, 60);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Продажи";
-            this.button3.UseVisualStyleBackColor = false;
+            this.saleComputersButton.BackColor = System.Drawing.Color.Transparent;
+            this.saleComputersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.saleComputersButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.saleComputersButton.FlatAppearance.BorderSize = 3;
+            this.saleComputersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.saleComputersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saleComputersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saleComputersButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.saleComputersButton.Location = new System.Drawing.Point(68, 370);
+            this.saleComputersButton.Name = "saleComputersButton";
+            this.saleComputersButton.Size = new System.Drawing.Size(301, 60);
+            this.saleComputersButton.TabIndex = 16;
+            this.saleComputersButton.Text = "Продажи";
+            this.saleComputersButton.UseVisualStyleBackColor = false;
+            this.saleComputersButton.Click += new System.EventHandler(this.saleComputersButton_Click);
             // 
             // MainMenuForm
             // 
@@ -209,7 +210,7 @@ namespace AIS_ComputerBYTE
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(829, 449);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.saleComputersButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.statistickButton);
             this.Controls.Add(this.registrationButton);
@@ -241,6 +242,6 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.Button registrationButton;
         private System.Windows.Forms.Button statistickButton;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button saleComputersButton;
     }
 }

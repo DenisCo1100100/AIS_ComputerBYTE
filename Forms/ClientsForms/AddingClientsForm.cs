@@ -32,11 +32,12 @@ namespace AIS_ComputerBYTE
             TableMenager tableMenager = new TableMenager();
             tableMenager.ExecuteRequest(cmdText);
 
-            MessageBox.Show("Внимание!", "Готово!");
+            MessageBox.Show("Готво!", "Внимание!");
         }
 
         private void AddingClientsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            new ColculateStatistick().AddClient();
             DataGridViewControll gridViewControll = new DataGridViewControll();
             gridViewControll.Update(DataGrid, "Clients");
         }

@@ -5,10 +5,12 @@ namespace AIS_ComputerBYTE
 {
     public partial class MainMenuForm : Form
     {
-        private string Login { get; set; }
+        public string Login { get; private set; }
         private string FullName { get; set; }
         private string Positions { get; set; }
         private int LvlAccses { get; set; }
+
+        public static MainMenuForm mainMenu;
 
         public MainMenuForm(string login, string fullName, string position, int lvlAccses)
         {
@@ -18,6 +20,7 @@ namespace AIS_ComputerBYTE
             FullName = fullName;
             Positions = position;
             LvlAccses = lvlAccses;
+            mainMenu = this;
 
             FillUserDate();
             ProvidingAccses();
@@ -64,6 +67,11 @@ namespace AIS_ComputerBYTE
         private void statistickButton_Click(object sender, EventArgs e)
         {
             new StatisticksForm().ShowDialog();
+        }
+
+        private void saleComputersButton_Click(object sender, EventArgs e)
+        {
+            new SaleComputersForm().ShowDialog();
         }
     }
 }
