@@ -7,7 +7,6 @@ namespace AIS_ComputerBYTE
 {
     public partial class AddingComputerForm : Form
     {
-        //TODO: картинку
         private int ImageName { get; set; }
         private DataGridView AssortmentDataGrid { get; set; }
 

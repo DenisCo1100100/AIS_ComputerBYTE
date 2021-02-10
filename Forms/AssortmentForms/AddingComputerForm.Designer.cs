@@ -348,6 +348,7 @@ namespace AIS_ComputerBYTE
             this.addImage.Text = "Добавить фото";
             this.addImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.addImage.UseVisualStyleBackColor = false;
+            this.addImage.Click += new System.EventHandler(this.addImage_Click);
             // 
             // AddingComputerForm
             // 

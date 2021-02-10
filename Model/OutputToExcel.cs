@@ -24,18 +24,16 @@ namespace AIS_ComputerBYTE
             Worksheet xlSht = xlWB.ActiveSheet;
 
             xlSht.Cells[1, "A"] = dockName;
-            xlSht.Cells[2, "A"] = "Средняя сумма сделки:";
+            xlSht.Cells[2, "A"] = "Проданный товар:";
             xlSht.Cells[2, "B"] = dataPrint[3];
-            xlSht.Cells[3, "A"] = "Проданный товар:";
+            xlSht.Cells[3, "A"] = "Колличество новых покупателей:";
             xlSht.Cells[3, "B"] = dataPrint[4];
-            xlSht.Cells[4, "A"] = "Колличество новых покупателей:";
+            xlSht.Cells[4, "A"] = "Средний уровень доверия:";
             xlSht.Cells[4, "B"] = dataPrint[5];
-            xlSht.Cells[5, "A"] = "Средний уровень доверия:";
+            xlSht.Cells[5, "A"] = "Сумма плановых сделок:";
             xlSht.Cells[5, "B"] = dataPrint[6];
-            xlSht.Cells[6, "A"] = "Сумма плановых сделок:";
+            xlSht.Cells[6, "A"] = "Полученная прибыль:";
             xlSht.Cells[6, "B"] = dataPrint[7];
-            xlSht.Cells[7, "A"] = "Полученная прибыль:";
-            xlSht.Cells[7, "B"] = dataPrint[8];
 
             xlWB.Close(true);
             xlApp.Quit();   
