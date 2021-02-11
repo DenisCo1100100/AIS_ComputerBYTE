@@ -73,5 +73,10 @@ namespace AIS_ComputerBYTE
         {
             new SaleComputersForm().ShowDialog();
         }
+
+        private void salesForecastsButton_Click(object sender, EventArgs e)
+        {
+            new SalesForecastsForm().ShowDialog();
+        }
     }
 }

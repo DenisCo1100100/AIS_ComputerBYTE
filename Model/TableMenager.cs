@@ -39,5 +39,23 @@ namespace AIS_ComputerBYTE
             OleDbConnect.Close();
             return getsStat;
         }
+
+        public string[] SelectInDB(string request, int countStr)
+        {
+            OleDbConnect.Open();
+            OleDbCommand cmd = new OleDbCommand(request, OleDbConnect);
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            int i = 0;
+            string[] getsStat = new string[countStr];
+            while (reader.Read())
+            {
+                getsStat[i] = reader.GetValue(0).ToString();
+                i++;
+            }
+
+            OleDbConnect.Close();
+            return getsStat;
+        }
     }
 }

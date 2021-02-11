@@ -19,6 +19,10 @@ namespace AIS_ComputerBYTE
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet2.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.computerByteDataBaseDataSet2.Clients);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet2.Clients". При необходимости она может быть перемещена или удалена.
+            this.clientsTableAdapter.Fill(this.computerByteDataBaseDataSet2.Clients);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet2.Clients". При необходимости она может быть перемещена или удалена.
+            this.clientsTableAdapter.Fill(this.computerByteDataBaseDataSet2.Clients);
 
             gridViewControll.Update(clientsGridView, "Clients");
         }

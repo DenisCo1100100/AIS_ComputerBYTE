@@ -73,7 +73,7 @@ namespace AIS_ComputerBYTE
         {
             try
             {
-                if (computersDataGridView[0, e.RowIndex].Value.ToString() == "")
+                if (clientsDataGridView[0, e.RowIndex].Value.ToString() == "")
                 {
                     throw new Exception();
                 }

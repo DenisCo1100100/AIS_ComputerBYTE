@@ -38,7 +38,7 @@ namespace AIS_ComputerBYTE
             this.changeEmployee = new System.Windows.Forms.Label();
             this.registrationButton = new System.Windows.Forms.Button();
             this.statistickButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.salesForecastsButton = new System.Windows.Forms.Button();
             this.saleComputersButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -168,22 +168,23 @@ namespace AIS_ComputerBYTE
             this.statistickButton.UseVisualStyleBackColor = false;
             this.statistickButton.Click += new System.EventHandler(this.statistickButton_Click);
             // 
-            // button2
+            // salesForecastsButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(463, 370);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(301, 60);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Прогнозы";
-            this.button2.UseVisualStyleBackColor = false;
+            this.salesForecastsButton.BackColor = System.Drawing.Color.Transparent;
+            this.salesForecastsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.salesForecastsButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.salesForecastsButton.FlatAppearance.BorderSize = 3;
+            this.salesForecastsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.salesForecastsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForecastsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.salesForecastsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.salesForecastsButton.Location = new System.Drawing.Point(463, 370);
+            this.salesForecastsButton.Name = "salesForecastsButton";
+            this.salesForecastsButton.Size = new System.Drawing.Size(301, 60);
+            this.salesForecastsButton.TabIndex = 15;
+            this.salesForecastsButton.Text = "Прогнозы";
+            this.salesForecastsButton.UseVisualStyleBackColor = false;
+            this.salesForecastsButton.Click += new System.EventHandler(this.salesForecastsButton_Click);
             // 
             // saleComputersButton
             // 
@@ -211,7 +212,7 @@ namespace AIS_ComputerBYTE
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(829, 449);
             this.Controls.Add(this.saleComputersButton);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.salesForecastsButton);
             this.Controls.Add(this.statistickButton);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.changeEmployee);
@@ -241,7 +242,7 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button registrationButton;
         private System.Windows.Forms.Button statistickButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button salesForecastsButton;
         private System.Windows.Forms.Button saleComputersButton;
     }
 }

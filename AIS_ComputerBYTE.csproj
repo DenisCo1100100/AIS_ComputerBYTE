@@ -88,10 +88,10 @@
     <Compile Include="Forms\AssortmentForms\AssortmentForm.Designer.cs">
       <DependentUpon>AssortmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AuthorizationForm.cs">
+    <Compile Include="Forms\OthersForms\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AuthorizationForm.Designer.cs">
+    <Compile Include="Forms\OthersForms\AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientsForms\AddingClientsForm.cs">
@@ -118,22 +118,28 @@
     <Compile Include="Forms\EmployeesForms\RegistrationEmployeesForm.Designer.cs">
       <DependentUpon>RegistrationEmployeesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenuForm.cs">
+    <Compile Include="Forms\OthersForms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenuForm.Designer.cs">
+    <Compile Include="Forms\OthersForms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SaleComputers.cs">
+    <Compile Include="Forms\OthersForms\SaleComputers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SaleComputers.Designer.cs">
+    <Compile Include="Forms\OthersForms\SaleComputers.Designer.cs">
       <DependentUpon>SaleComputers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StatisticksForm.cs">
+    <Compile Include="Forms\OthersForms\SalesForecastsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StatisticksForm.Designer.cs">
+    <Compile Include="Forms\OthersForms\SalesForecastsForm.Designer.cs">
+      <DependentUpon>SalesForecastsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OthersForms\StatisticksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OthersForms\StatisticksForm.Designer.cs">
       <DependentUpon>StatisticksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Authorization\Authentication.cs" />
@@ -151,7 +157,7 @@
     <EmbeddedResource Include="Forms\AssortmentForms\AssortmentForm.resx">
       <DependentUpon>AssortmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AuthorizationForm.resx">
+    <EmbeddedResource Include="Forms\OthersForms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientsForms\AddingClientsForm.resx">
@@ -166,13 +172,16 @@
     <EmbeddedResource Include="Forms\EmployeesForms\RegistrationEmployeesForm.resx">
       <DependentUpon>RegistrationEmployeesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+    <EmbeddedResource Include="Forms\OthersForms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SaleComputers.resx">
+    <EmbeddedResource Include="Forms\OthersForms\SaleComputers.resx">
       <DependentUpon>SaleComputers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StatisticksForm.resx">
+    <EmbeddedResource Include="Forms\OthersForms\SalesForecastsForm.resx">
+      <DependentUpon>SalesForecastsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OthersForms\StatisticksForm.resx">
       <DependentUpon>StatisticksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

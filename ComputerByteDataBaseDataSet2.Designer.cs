@@ -299,6 +299,8 @@ namespace AIS_ComputerBYTE {
             
             private global::System.Data.DataColumn columnПредпологаемый_месяц;
             
+            private global::System.Data.DataColumn columnСредняя_зарплата;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ClientsDataTable() {
@@ -414,6 +416,14 @@ namespace AIS_ComputerBYTE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Средняя_зарплатаColumn {
+                get {
+                    return this.columnСредняя_зарплата;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace AIS_ComputerBYTE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ClientsRow AddClientsRow(string Фамилия, string Имя, string Отчество, string Адрес, string Паспорт, System.DateTime Дата_регистрации, string Мобильный_телефон, int Предоставить_скидку, string Предпологаемый_месяц) {
+            public ClientsRow AddClientsRow(string Фамилия, string Имя, string Отчество, string Адрес, string Паспорт, System.DateTime Дата_регистрации, string Мобильный_телефон, int Предоставить_скидку, string Предпологаемый_месяц, int Средняя_зарплата) {
                 ClientsRow rowClientsRow = ((ClientsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -461,7 +471,8 @@ namespace AIS_ComputerBYTE {
                         Дата_регистрации,
                         Мобильный_телефон,
                         Предоставить_скидку,
-                        Предпологаемый_месяц};
+                        Предпологаемый_месяц,
+                        Средняя_зарплата};
                 rowClientsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClientsRow);
                 return rowClientsRow;
@@ -501,6 +512,7 @@ namespace AIS_ComputerBYTE {
                 this.columnМобильный_телефон = base.Columns["Мобильный телефон"];
                 this.columnПредоставить_скидку = base.Columns["Предоставить скидку"];
                 this.columnПредпологаемый_месяц = base.Columns["Предпологаемый месяц"];
+                this.columnСредняя_зарплата = base.Columns["Средняя зарплата"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -526,6 +538,8 @@ namespace AIS_ComputerBYTE {
                 base.Columns.Add(this.columnПредоставить_скидку);
                 this.columnПредпологаемый_месяц = new global::System.Data.DataColumn("Предпологаемый месяц", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПредпологаемый_месяц);
+                this.columnСредняя_зарплата = new global::System.Data.DataColumn("Средняя зарплата", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСредняя_зарплата);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод}, true));
                 this.columnКод.AutoIncrement = true;
@@ -837,6 +851,22 @@ namespace AIS_ComputerBYTE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Средняя_зарплата {
+                get {
+                    try {
+                        return ((int)(this[this.tableClients.Средняя_зарплатаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Средняя зарплата\' в таблице \'Clients\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableClients.Средняя_зарплатаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsФамилияNull() {
                 return this.IsNull(this.tableClients.ФамилияColumn);
             }
@@ -941,6 +971,18 @@ namespace AIS_ComputerBYTE {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetПредпологаемый_месяцNull() {
                 this[this.tableClients.Предпологаемый_месяцColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsСредняя_зарплатаNull() {
+                return this.IsNull(this.tableClients.Средняя_зарплатаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetСредняя_зарплатаNull() {
+                this[this.tableClients.Средняя_зарплатаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1113,10 +1155,11 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("Мобильный телефон", "Мобильный телефон");
             tableMapping.ColumnMappings.Add("Предоставить скидку", "Предоставить скидку");
             tableMapping.ColumnMappings.Add("Предпологаемый месяц", "Предпологаемый месяц");
+            tableMapping.ColumnMappings.Add("Средняя зарплата", "Средняя зарплата");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Clients` WHERE ((`Код` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Паспорт` IS NULL) OR (`Паспорт` = ?)) AND ((? = 1 AND `Дата регистрации` IS NULL) OR (`Дата регистрации` = ?)) AND ((? = 1 AND `Мобильный телефон` IS NULL) OR (`Мобильный телефон` = ?)) AND ((? = 1 AND `Предоставить скидку` IS NULL) OR (`Предоставить скидку` = ?)) AND ((? = 1 AND `Предпологаемый месяц` IS NULL) OR (`Предпологаемый месяц` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Clients` WHERE ((`Код` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Паспорт` IS NULL) OR (`Паспорт` = ?)) AND ((? = 1 AND `Дата регистрации` IS NULL) OR (`Дата регистрации` = ?)) AND ((? = 1 AND `Мобильный телефон` IS NULL) OR (`Мобильный телефон` = ?)) AND ((? = 1 AND `Предоставить скидку` IS NULL) OR (`Предоставить скидку` = ?)) AND ((? = 1 AND `Предпологаемый месяц` IS NULL) OR (`Предпологаемый месяц` = ?)) AND ((? = 1 AND `Средняя зарплата` IS NULL) OR (`Средняя зарплата` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Фамилия", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, true, null));
@@ -1137,11 +1180,13 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Предоставить_скидку", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предоставить скидку", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Clients` (`Фамилия`, `Имя`, `Отчество`, `Адрес`, `Паспорт`, `Дата ре" +
-                "гистрации`, `Мобильный телефон`, `Предоставить скидку`, `Предпологаемый месяц`) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "гистрации`, `Мобильный телефон`, `Предоставить скидку`, `Предпологаемый месяц`, " +
+                "`Средняя зарплата`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
@@ -1152,9 +1197,10 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Мобильный_телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Мобильный телефон", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Предоставить_скидку", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предоставить скидку", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Clients` SET `Фамилия` = ?, `Имя` = ?, `Отчество` = ?, `Адрес` = ?, `Паспорт` = ?, `Дата регистрации` = ?, `Мобильный телефон` = ?, `Предоставить скидку` = ?, `Предпологаемый месяц` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Паспорт` IS NULL) OR (`Паспорт` = ?)) AND ((? = 1 AND `Дата регистрации` IS NULL) OR (`Дата регистрации` = ?)) AND ((? = 1 AND `Мобильный телефон` IS NULL) OR (`Мобильный телефон` = ?)) AND ((? = 1 AND `Предоставить скидку` IS NULL) OR (`Предоставить скидку` = ?)) AND ((? = 1 AND `Предпологаемый месяц` IS NULL) OR (`Предпологаемый месяц` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Clients` SET `Фамилия` = ?, `Имя` = ?, `Отчество` = ?, `Адрес` = ?, `Паспорт` = ?, `Дата регистрации` = ?, `Мобильный телефон` = ?, `Предоставить скидку` = ?, `Предпологаемый месяц` = ?, `Средняя зарплата` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Адрес` IS NULL) OR (`Адрес` = ?)) AND ((? = 1 AND `Паспорт` IS NULL) OR (`Паспорт` = ?)) AND ((? = 1 AND `Дата регистрации` IS NULL) OR (`Дата регистрации` = ?)) AND ((? = 1 AND `Мобильный телефон` IS NULL) OR (`Мобильный телефон` = ?)) AND ((? = 1 AND `Предоставить скидку` IS NULL) OR (`Предоставить скидку` = ?)) AND ((? = 1 AND `Предпологаемый месяц` IS NULL) OR (`Предпологаемый месяц` = ?)) AND ((? = 1 AND `Средняя зарплата` IS NULL) OR (`Средняя зарплата` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
@@ -1165,6 +1211,7 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Мобильный_телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Мобильный телефон", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Предоставить_скидку", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предоставить скидку", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Фамилия", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, false, null));
@@ -1184,6 +1231,8 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Предоставить_скидку", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предоставить скидку", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Предпологаемый_месяц", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Предпологаемый месяц", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Средняя_зарплата", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Средняя зарплата", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1200,7 +1249,8 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Код, Фамилия, Имя, Отчество, Адрес, Паспорт, [Дата регистрации], [Мобильны" +
-                "й телефон], [Предоставить скидку], [Предпологаемый месяц] FROM Clients";
+                "й телефон], [Предоставить скидку], [Предпологаемый месяц], [Средняя зарплата] FR" +
+                "OM Clients";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1261,7 +1311,7 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Код, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Адрес, string Original_Паспорт, global::System.Nullable<global::System.DateTime> Original_Дата_регистрации, string Original_Мобильный_телефон, global::System.Nullable<int> Original_Предоставить_скидку, string Original_Предпологаемый_месяц) {
+        public virtual int Delete(int Original_Код, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Адрес, string Original_Паспорт, global::System.Nullable<global::System.DateTime> Original_Дата_регистрации, string Original_Мобильный_телефон, global::System.Nullable<int> Original_Предоставить_скидку, string Original_Предпологаемый_месяц, global::System.Nullable<int> Original_Средняя_зарплата) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Код));
             if ((Original_Фамилия == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -1335,6 +1385,14 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Предпологаемый_месяц));
             }
+            if ((Original_Средняя_зарплата.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_Средняя_зарплата.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1355,7 +1413,7 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Фамилия, string Имя, string Отчество, string Адрес, string Паспорт, global::System.Nullable<global::System.DateTime> Дата_регистрации, string Мобильный_телефон, global::System.Nullable<int> Предоставить_скидку, string Предпологаемый_месяц) {
+        public virtual int Insert(string Фамилия, string Имя, string Отчество, string Адрес, string Паспорт, global::System.Nullable<global::System.DateTime> Дата_регистрации, string Мобильный_телефон, global::System.Nullable<int> Предоставить_скидку, string Предпологаемый_месяц, global::System.Nullable<int> Средняя_зарплата) {
             if ((Фамилия == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1410,6 +1468,12 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Предпологаемый_месяц));
             }
+            if ((Средняя_зарплата.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Средняя_зарплата.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1440,6 +1504,7 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
                     string Мобильный_телефон, 
                     global::System.Nullable<int> Предоставить_скидку, 
                     string Предпологаемый_месяц, 
+                    global::System.Nullable<int> Средняя_зарплата, 
                     int Original_Код, 
                     string Original_Фамилия, 
                     string Original_Имя, 
@@ -1449,7 +1514,8 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
                     global::System.Nullable<global::System.DateTime> Original_Дата_регистрации, 
                     string Original_Мобильный_телефон, 
                     global::System.Nullable<int> Original_Предоставить_скидку, 
-                    string Original_Предпологаемый_месяц) {
+                    string Original_Предпологаемый_месяц, 
+                    global::System.Nullable<int> Original_Средняя_зарплата) {
             if ((Фамилия == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1504,78 +1570,92 @@ namespace AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Предпологаемый_месяц));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Код));
-            if ((Original_Фамилия == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((Средняя_зарплата.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Средняя_зарплата.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Фамилия));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Код));
+            if ((Original_Фамилия == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Фамилия));
             }
             if ((Original_Имя == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Имя));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Имя));
             }
             if ((Original_Отчество == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Отчество));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Отчество));
             }
             if ((Original_Адрес == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Адрес));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Адрес));
             }
             if ((Original_Паспорт == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Паспорт));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Паспорт));
             }
             if ((Original_Дата_регистрации.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_Дата_регистрации.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_Дата_регистрации.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_Мобильный_телефон == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Мобильный_телефон));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Мобильный_телефон));
             }
             if ((Original_Предоставить_скидку.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Предоставить_скидку.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_Предоставить_скидку.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_Предпологаемый_месяц == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Предпологаемый_месяц));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Предпологаемый_месяц));
+            }
+            if ((Original_Средняя_зарплата.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Средняя_зарплата.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

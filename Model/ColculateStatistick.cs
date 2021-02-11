@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AIS_ComputerBYTE
 {
@@ -43,9 +39,9 @@ namespace AIS_ComputerBYTE
             _numberMonthPurch = DateTime.Today.Month;
         }
 
-        public void AddClient()
+        public void AddClient(int profit)
         {
-            string request = $"UPDATE Statistics SET Statistics.[Новых покупателей] = [Новых покупателей]+1 WHERE Месяц = '{_months[_numberMonthPurch - 1]}'; ";
+            string request = $"UPDATE Statistics SET Statistics.[Новых покупателей] = [Новых покупателей]+1, [Сумма плановых сделок] = [Сумма плановых сделок] + '{profit}' WHERE Месяц = '{_months[_numberMonthPurch - 1]}'; ";
             _tableMenager.ExecuteRequest(request);
 
             request = $"UPDATE Employees SET Заработная_плата = Заработная_плата + 10 WHERE Логин = '{_login}';";
@@ -111,6 +107,41 @@ namespace AIS_ComputerBYTE
             string request = $"SELECT [Сумма плановых сделок] FROM Statistics WHERE Месяц = '{_months[_numberMonthPurch]}'";
 
             return int.Parse(_tableMenager.SelectInDB(request)[0]) - toPay;
+        }
+
+        public double ColculateForecastProfit(int monthNumber)
+        {
+            string request = $"SELECT COUNT(Фамилия) FROM Clients WHERE [Предпологаемый месяц] = '{_months[monthNumber]}'";
+            string[] countClients = _tableMenager.SelectInDB(request);
+
+            request = $"SELECT [Средняя зарплата] FROM Clients WHERE [Предпологаемый месяц] = '{_months[monthNumber]}'";
+            string[] wagesClients = _tableMenager.SelectInDB(request, int.Parse(countClients[0]));
+
+            double sumWages = 0;
+            foreach (string wage in wagesClients)
+            {
+                if (wage != null)
+                {
+                    sumWages += double.Parse(wage) / 3;
+                }
+            }
+
+            return sumWages * ColculateForecastSeling(monthNumber);
+        }
+
+        public double ColculateForecastSeling(int monthNumber)
+        {
+            string request = $"SELECT COUNT(Фамилия) FROM Clients WHERE [Предпологаемый месяц] = '{_months[monthNumber]}'";
+            string[] clients = _tableMenager.SelectInDB(request);
+
+            request = $"SELECT [Средний уровень доверия], [Проданный товар], [Сумма плановых сделок], [Полученая прибыль] FROM Statistics WHERE Месяц = '{_months[_numberMonthPurch - 1]}'";
+            string[] statistic = _tableMenager.SelectInDB(request);
+            double resulColculate = double.Parse(statistic[0]) * double.Parse(clients[0]) / 100.0;
+            resulColculate = resulColculate * double.Parse(statistic[1]) / 100.0;
+
+            resulColculate = double.Parse(statistic[3]) * 100 / double.Parse(statistic[2]) * resulColculate;
+
+            return resulColculate;
         }
     }
 }

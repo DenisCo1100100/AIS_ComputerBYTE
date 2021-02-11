@@ -37,7 +37,7 @@ namespace AIS_ComputerBYTE
 
         private void AddingClientsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            new ColculateStatistick().AddClient();
+            new ColculateStatistick().AddClient(int.Parse(profitTextBox.Text));
             DataGridViewControll gridViewControll = new DataGridViewControll();
             gridViewControll.Update(DataGrid, "Clients");
         }

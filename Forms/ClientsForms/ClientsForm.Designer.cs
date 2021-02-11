@@ -33,6 +33,7 @@ namespace AIS_ComputerBYTE
             this.deleteButton = new System.Windows.Forms.Button();
             this.registrationButton = new System.Windows.Forms.Button();
             this.clientsGridView = new System.Windows.Forms.DataGridView();
+            this.backButton = new System.Windows.Forms.Button();
             this.computerByteDataBaseDataSet2 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters.ClientsTableAdapter();
@@ -46,7 +47,7 @@ namespace AIS_ComputerBYTE
             this.мобильныйТелефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.предоставитьСкидкуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.предпологаемыйМесяцDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backButton = new System.Windows.Forms.Button();
+            this.средняяЗарплатаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -106,13 +107,33 @@ namespace AIS_ComputerBYTE
             this.датаРегистрацииDataGridViewTextBoxColumn,
             this.мобильныйТелефонDataGridViewTextBoxColumn,
             this.предоставитьСкидкуDataGridViewTextBoxColumn,
-            this.предпологаемыйМесяцDataGridViewTextBoxColumn});
+            this.предпологаемыйМесяцDataGridViewTextBoxColumn,
+            this.средняяЗарплатаDataGridViewTextBoxColumn});
             this.clientsGridView.DataSource = this.clientsBindingSource;
             this.clientsGridView.Location = new System.Drawing.Point(12, 12);
             this.clientsGridView.Name = "clientsGridView";
             this.clientsGridView.Size = new System.Drawing.Size(911, 363);
             this.clientsGridView.TabIndex = 14;
             this.clientsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsGridView_CellClick);
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.backButton.FlatAppearance.BorderSize = 3;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.backButton.Location = new System.Drawing.Point(709, 391);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(214, 75);
+            this.backButton.TabIndex = 15;
+            this.backButton.Text = "Назад";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // computerByteDataBaseDataSet2
             // 
@@ -188,24 +209,11 @@ namespace AIS_ComputerBYTE
             this.предпологаемыйМесяцDataGridViewTextBoxColumn.HeaderText = "Предпологаемый месяц";
             this.предпологаемыйМесяцDataGridViewTextBoxColumn.Name = "предпологаемыйМесяцDataGridViewTextBoxColumn";
             // 
-            // backButton
+            // средняяЗарплатаDataGridViewTextBoxColumn
             // 
-            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.backButton.FlatAppearance.BorderSize = 3;
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backButton.Location = new System.Drawing.Point(709, 391);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(214, 75);
-            this.backButton.TabIndex = 15;
-            this.backButton.Text = "Назад";
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            this.средняяЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Средняя зарплата";
+            this.средняяЗарплатаDataGridViewTextBoxColumn.HeaderText = "Средняя зарплата";
+            this.средняяЗарплатаDataGridViewTextBoxColumn.Name = "средняяЗарплатаDataGridViewTextBoxColumn";
             // 
             // ClientsForm
             // 
@@ -232,6 +240,7 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button registrationButton;
         private System.Windows.Forms.DataGridView clientsGridView;
+        private System.Windows.Forms.Button backButton;
         private ComputerByteDataBaseDataSet2 computerByteDataBaseDataSet2;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private ComputerByteDataBaseDataSet2TableAdapters.ClientsTableAdapter clientsTableAdapter;
@@ -245,6 +254,6 @@ namespace AIS_ComputerBYTE
         private System.Windows.Forms.DataGridViewTextBoxColumn мобильныйТелефонDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn предоставитьСкидкуDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn предпологаемыйМесяцDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn средняяЗарплатаDataGridViewTextBoxColumn;
     }
 }
