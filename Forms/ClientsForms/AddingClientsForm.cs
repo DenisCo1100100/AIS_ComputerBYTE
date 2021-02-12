@@ -20,7 +20,7 @@ namespace AIS_ComputerBYTE
             {
                 int discount = Convert.ToInt32(discountTextBox.Text);
 
-                string cmdText = $"INSERT INTO Clients ([Фамилия], [Имя], [Отчество], [Адрес], [Паспорт], [Дата регистрации], [Мобильный телефон], [Предоставить скидку], [Предпологаемый месяц]) VALUES (" +
+                string cmdText = $"INSERT INTO Clients ([Фамилия], [Имя], [Отчество], [Адрес], [Паспорт], [Дата регистрации], [Мобильный телефон], [Предоставить скидку], [Предпологаемый месяц], [Средняя зарплата]) VALUES (" +
                     $"'" + lastNameTextBox.Text + "'," +
                     " '" + firstNameTextBox.Text + "'," +
                     " '" + patronymicTextBox.Text + "'," +
@@ -29,8 +29,8 @@ namespace AIS_ComputerBYTE
                     " '" + DateTime.Now + "'," +
                     " '" + phoneTextBox.Text + "'," +
                     " '" + discount + "'," +
-                    " '" + monthСomboBox.Text + "')";
-
+                    " '" + monthСomboBox.Text + "'," +
+                    " '" + profitTextBox.Text + "')";
 
                 new ColculateStatistick().AddClient(int.Parse(profitTextBox.Text));
 

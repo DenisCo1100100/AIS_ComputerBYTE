@@ -43,7 +43,7 @@ namespace AIS_ComputerBYTE
                 }
                 else
                 {
-                    MessageBox.Show("Добавте изображение", "Ошибка");
+                    MessageBox.Show("Добавьте изображение", "Ошибка");
                 }
             
                 string imageIndex = ImageName.ToString();

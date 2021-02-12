@@ -45,8 +45,6 @@ namespace AIS_ComputerBYTE
             this.computersTableAdapter.Fill(this.computerByteDataBaseDataSet3.Computers);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet4.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.computerByteDataBaseDataSet4.Clients);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet3.Computers". При необходимости она может быть перемещена или удалена.
-            this.computersTableAdapter.Fill(this.computerByteDataBaseDataSet3.Computers);
         }
 
         private void computersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -84,8 +82,9 @@ namespace AIS_ComputerBYTE
             catch (Exception)
             {
                 MessageBox.Show("Нельзя выбрать!", "Внимание!");
-            }
 
+                _viewControll.Update(computersDataGridView, "Computers");
+            }
         }
 
         private void clientsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -107,6 +106,8 @@ namespace AIS_ComputerBYTE
             catch (Exception)
             {
                 MessageBox.Show("Нельзя выбрать!", "Внимание!");
+
+                _viewControll.Update(clientsDataGridView, "Clients");
             }
         }
 

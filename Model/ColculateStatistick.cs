@@ -53,7 +53,7 @@ namespace AIS_ComputerBYTE
             _wage = GetWage(toPay);
             _profit = ColculateProfit(toPay);
             _trustLvl = ColculateTrustLVl(toPay);
-            _newDiscount = GetDiscount(int.Parse(SaleComputersForm.saleComputers.Pasport), toPay);
+            _newDiscount = GetDiscount(int.Parse(SaleComputersForm.saleComputers.Pasport));
             _pricePlanDeals = GetPricePlanDeals(toPay);
 
             string request = $"UPDATE Statistics SET Statistics.[Проданный товар] = [Проданный товар]+1, Statistics.[Средний уровень доверия] = '{_trustLvl}', Statistics.[Сумма плановых сделок] = '{_pricePlanDeals}', Statistics.[Полученая прибыль] = '{_profit}' WHERE Месяц = '{_months[_numberMonthPurch - 1]}'; ";
@@ -84,11 +84,11 @@ namespace AIS_ComputerBYTE
             return meanTrust / (trustEmployees.Length + 1.0);
         }
 
-        private int GetDiscount(int pasportNumber, int toPay)
+        private int GetDiscount(int pasportNumber)
         {
             string request = $"SELECT [Предоставить скидку] FROM Clients WHERE Паспорт = '{pasportNumber}'";
 
-            return int.Parse(_tableMenager.SelectInDB(request)[0] + (toPay * 1 / 100));
+            return int.Parse(_tableMenager.SelectInDB(request)[0]) + 5;
         }
 
         private int GetWage(int toPay)

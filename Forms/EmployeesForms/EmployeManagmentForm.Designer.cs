@@ -81,6 +81,8 @@ namespace AIS_ComputerBYTE
             this.employeesDataGridView.DataSource = this.employeesBindingSource;
             this.employeesDataGridView.Location = new System.Drawing.Point(12, 12);
             this.employeesDataGridView.Name = "employeesDataGridView";
+            this.employeesDataGridView.ReadOnly = true;
+            this.employeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeesDataGridView.Size = new System.Drawing.Size(913, 319);
             this.employeesDataGridView.TabIndex = 0;
             this.employeesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellClick);
@@ -90,84 +92,98 @@ namespace AIS_ComputerBYTE
             this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
             this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
             this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // логинDataGridViewTextBoxColumn
             // 
             this.логинDataGridViewTextBoxColumn.DataPropertyName = "Логин";
             this.логинDataGridViewTextBoxColumn.HeaderText = "Логин";
             this.логинDataGridViewTextBoxColumn.Name = "логинDataGridViewTextBoxColumn";
+            this.логинDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // парольDataGridViewTextBoxColumn
             // 
             this.парольDataGridViewTextBoxColumn.DataPropertyName = "Пароль";
             this.парольDataGridViewTextBoxColumn.HeaderText = "Пароль";
             this.парольDataGridViewTextBoxColumn.Name = "парольDataGridViewTextBoxColumn";
+            this.парольDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // должностьDataGridViewTextBoxColumn
             // 
             this.должностьDataGridViewTextBoxColumn.DataPropertyName = "Должность";
             this.должностьDataGridViewTextBoxColumn.HeaderText = "Должность";
             this.должностьDataGridViewTextBoxColumn.Name = "должностьDataGridViewTextBoxColumn";
+            this.должностьDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // полноеИмяDataGridViewTextBoxColumn
             // 
             this.полноеИмяDataGridViewTextBoxColumn.DataPropertyName = "Полное имя";
             this.полноеИмяDataGridViewTextBoxColumn.HeaderText = "Полное имя";
             this.полноеИмяDataGridViewTextBoxColumn.Name = "полноеИмяDataGridViewTextBoxColumn";
+            this.полноеИмяDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // номерПаспортаDataGridViewTextBoxColumn
             // 
             this.номерПаспортаDataGridViewTextBoxColumn.DataPropertyName = "Номер паспорта";
             this.номерПаспортаDataGridViewTextBoxColumn.HeaderText = "Номер паспорта";
             this.номерПаспортаDataGridViewTextBoxColumn.Name = "номерПаспортаDataGridViewTextBoxColumn";
+            this.номерПаспортаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // возрастDataGridViewTextBoxColumn
             // 
             this.возрастDataGridViewTextBoxColumn.DataPropertyName = "Возраст";
             this.возрастDataGridViewTextBoxColumn.HeaderText = "Возраст";
             this.возрастDataGridViewTextBoxColumn.Name = "возрастDataGridViewTextBoxColumn";
+            this.возрастDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // адресDataGridViewTextBoxColumn
             // 
             this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
             this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.адресDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // уровеньДоступаDataGridViewTextBoxColumn
             // 
             this.уровеньДоступаDataGridViewTextBoxColumn.DataPropertyName = "Уровень доступа";
             this.уровеньДоступаDataGridViewTextBoxColumn.HeaderText = "Уровень доступа";
             this.уровеньДоступаDataGridViewTextBoxColumn.Name = "уровеньДоступаDataGridViewTextBoxColumn";
+            this.уровеньДоступаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // полученнаяприбыльDataGridViewTextBoxColumn
             // 
             this.полученнаяприбыльDataGridViewTextBoxColumn.DataPropertyName = "Полученная_прибыль";
             this.полученнаяприбыльDataGridViewTextBoxColumn.HeaderText = "Полученная_прибыль";
             this.полученнаяприбыльDataGridViewTextBoxColumn.Name = "полученнаяприбыльDataGridViewTextBoxColumn";
+            this.полученнаяприбыльDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // заработнаяплатаDataGridViewTextBoxColumn
             // 
             this.заработнаяплатаDataGridViewTextBoxColumn.DataPropertyName = "Заработная_плата";
             this.заработнаяплатаDataGridViewTextBoxColumn.HeaderText = "Заработная_плата";
             this.заработнаяплатаDataGridViewTextBoxColumn.Name = "заработнаяплатаDataGridViewTextBoxColumn";
+            this.заработнаяплатаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // стажDataGridViewTextBoxColumn
             // 
             this.стажDataGridViewTextBoxColumn.DataPropertyName = "Стаж";
             this.стажDataGridViewTextBoxColumn.HeaderText = "Стаж";
             this.стажDataGridViewTextBoxColumn.Name = "стажDataGridViewTextBoxColumn";
+            this.стажDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // образованиеDataGridViewTextBoxColumn
             // 
             this.образованиеDataGridViewTextBoxColumn.DataPropertyName = "Образование";
             this.образованиеDataGridViewTextBoxColumn.HeaderText = "Образование";
             this.образованиеDataGridViewTextBoxColumn.Name = "образованиеDataGridViewTextBoxColumn";
+            this.образованиеDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // уровеньдоверияDataGridViewTextBoxColumn
             // 
             this.уровеньдоверияDataGridViewTextBoxColumn.DataPropertyName = "Уровень_доверия";
             this.уровеньдоверияDataGridViewTextBoxColumn.HeaderText = "Уровень_доверия";
             this.уровеньдоверияDataGridViewTextBoxColumn.Name = "уровеньдоверияDataGridViewTextBoxColumn";
+            this.уровеньдоверияDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // employeesBindingSource
             // 

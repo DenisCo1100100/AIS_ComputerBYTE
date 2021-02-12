@@ -32,6 +32,18 @@ namespace AIS_ComputerBYTE
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaleComputersForm));
             this.computersDataGridView = new System.Windows.Forms.DataGridView();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.производительDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.материнскаяПлатаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.оЗУDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.пЗУDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.блокПитанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.видеокартаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.процессорDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.гарантияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.computerByteDataBaseDataSet3 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet3();
             this.clientsDataGridView = new System.Windows.Forms.DataGridView();
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,26 +59,14 @@ namespace AIS_ComputerBYTE
             this.selectClientLabel = new System.Windows.Forms.Label();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.computerByteDataBaseDataSet3 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet3();
-            this.computersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.computersTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet3TableAdapters.ComputersTableAdapter();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.производительDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.материнскаяПлатаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.оЗУDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.пЗУDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.блокПитанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.видеокартаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.процессорDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.гарантияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.computersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // computersDataGridView
@@ -89,9 +89,91 @@ namespace AIS_ComputerBYTE
             this.computersDataGridView.DataSource = this.computersBindingSource;
             this.computersDataGridView.Location = new System.Drawing.Point(313, 30);
             this.computersDataGridView.Name = "computersDataGridView";
+            this.computersDataGridView.ReadOnly = true;
+            this.computersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.computersDataGridView.Size = new System.Drawing.Size(709, 300);
             this.computersDataGridView.TabIndex = 0;
             this.computersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.computersDataGridView_CellClick);
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // производительDataGridViewTextBoxColumn
+            // 
+            this.производительDataGridViewTextBoxColumn.DataPropertyName = "Производитель";
+            this.производительDataGridViewTextBoxColumn.HeaderText = "Производитель";
+            this.производительDataGridViewTextBoxColumn.Name = "производительDataGridViewTextBoxColumn";
+            this.производительDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // материнскаяПлатаDataGridViewTextBoxColumn
+            // 
+            this.материнскаяПлатаDataGridViewTextBoxColumn.DataPropertyName = "Материнская плата";
+            this.материнскаяПлатаDataGridViewTextBoxColumn.HeaderText = "Материнская плата";
+            this.материнскаяПлатаDataGridViewTextBoxColumn.Name = "материнскаяПлатаDataGridViewTextBoxColumn";
+            this.материнскаяПлатаDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // оЗУDataGridViewTextBoxColumn
+            // 
+            this.оЗУDataGridViewTextBoxColumn.DataPropertyName = "ОЗУ";
+            this.оЗУDataGridViewTextBoxColumn.HeaderText = "ОЗУ";
+            this.оЗУDataGridViewTextBoxColumn.Name = "оЗУDataGridViewTextBoxColumn";
+            this.оЗУDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // пЗУDataGridViewTextBoxColumn
+            // 
+            this.пЗУDataGridViewTextBoxColumn.DataPropertyName = "ПЗУ";
+            this.пЗУDataGridViewTextBoxColumn.HeaderText = "ПЗУ";
+            this.пЗУDataGridViewTextBoxColumn.Name = "пЗУDataGridViewTextBoxColumn";
+            this.пЗУDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // блокПитанияDataGridViewTextBoxColumn
+            // 
+            this.блокПитанияDataGridViewTextBoxColumn.DataPropertyName = "Блок питания";
+            this.блокПитанияDataGridViewTextBoxColumn.HeaderText = "Блок питания";
+            this.блокПитанияDataGridViewTextBoxColumn.Name = "блокПитанияDataGridViewTextBoxColumn";
+            this.блокПитанияDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // видеокартаDataGridViewTextBoxColumn
+            // 
+            this.видеокартаDataGridViewTextBoxColumn.DataPropertyName = "Видеокарта";
+            this.видеокартаDataGridViewTextBoxColumn.HeaderText = "Видеокарта";
+            this.видеокартаDataGridViewTextBoxColumn.Name = "видеокартаDataGridViewTextBoxColumn";
+            this.видеокартаDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // процессорDataGridViewTextBoxColumn
+            // 
+            this.процессорDataGridViewTextBoxColumn.DataPropertyName = "Процессор";
+            this.процессорDataGridViewTextBoxColumn.HeaderText = "Процессор";
+            this.процессорDataGridViewTextBoxColumn.Name = "процессорDataGridViewTextBoxColumn";
+            this.процессорDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ценаDataGridViewTextBoxColumn
+            // 
+            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Цена";
+            this.ценаDataGridViewTextBoxColumn.HeaderText = "Цена";
+            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
+            this.ценаDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // гарантияDataGridViewTextBoxColumn
+            // 
+            this.гарантияDataGridViewTextBoxColumn.DataPropertyName = "Гарантия";
+            this.гарантияDataGridViewTextBoxColumn.HeaderText = "Гарантия";
+            this.гарантияDataGridViewTextBoxColumn.Name = "гарантияDataGridViewTextBoxColumn";
+            this.гарантияDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // computersBindingSource
+            // 
+            this.computersBindingSource.DataMember = "Computers";
+            this.computersBindingSource.DataSource = this.computerByteDataBaseDataSet3;
+            // 
+            // computerByteDataBaseDataSet3
+            // 
+            this.computerByteDataBaseDataSet3.DataSetName = "ComputerByteDataBaseDataSet3";
+            this.computerByteDataBaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clientsDataGridView
             // 
@@ -110,6 +192,8 @@ namespace AIS_ComputerBYTE
             this.clientsDataGridView.DataSource = this.clientsBindingSource;
             this.clientsDataGridView.Location = new System.Drawing.Point(12, 360);
             this.clientsDataGridView.Name = "clientsDataGridView";
+            this.clientsDataGridView.ReadOnly = true;
+            this.clientsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientsDataGridView.Size = new System.Drawing.Size(1010, 244);
             this.clientsDataGridView.TabIndex = 1;
             this.clientsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsDataGridView_CellClick);
@@ -119,42 +203,49 @@ namespace AIS_ComputerBYTE
             this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            this.фамилияDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // имяDataGridViewTextBoxColumn
             // 
             this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
             this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            this.имяDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // отчествоDataGridViewTextBoxColumn
             // 
             this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            this.отчествоDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // адресDataGridViewTextBoxColumn
             // 
             this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
             this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.адресDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // паспортDataGridViewTextBoxColumn
             // 
             this.паспортDataGridViewTextBoxColumn.DataPropertyName = "Паспорт";
             this.паспортDataGridViewTextBoxColumn.HeaderText = "Паспорт";
             this.паспортDataGridViewTextBoxColumn.Name = "паспортDataGridViewTextBoxColumn";
+            this.паспортDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // мобильныйТелефонDataGridViewTextBoxColumn
             // 
             this.мобильныйТелефонDataGridViewTextBoxColumn.DataPropertyName = "Мобильный телефон";
             this.мобильныйТелефонDataGridViewTextBoxColumn.HeaderText = "Мобильный телефон";
             this.мобильныйТелефонDataGridViewTextBoxColumn.Name = "мобильныйТелефонDataGridViewTextBoxColumn";
+            this.мобильныйТелефонDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // предоставитьСкидкуDataGridViewTextBoxColumn
             // 
             this.предоставитьСкидкуDataGridViewTextBoxColumn.DataPropertyName = "Предоставить скидку";
             this.предоставитьСкидкуDataGridViewTextBoxColumn.HeaderText = "Предоставить скидку";
             this.предоставитьСкидкуDataGridViewTextBoxColumn.Name = "предоставитьСкидкуDataGridViewTextBoxColumn";
+            this.предоставитьСкидкуDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clientsBindingSource
             // 
@@ -222,79 +313,9 @@ namespace AIS_ComputerBYTE
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // computerByteDataBaseDataSet3
-            // 
-            this.computerByteDataBaseDataSet3.DataSetName = "ComputerByteDataBaseDataSet3";
-            this.computerByteDataBaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // computersBindingSource
-            // 
-            this.computersBindingSource.DataMember = "Computers";
-            this.computersBindingSource.DataSource = this.computerByteDataBaseDataSet3;
-            // 
             // computersTableAdapter
             // 
             this.computersTableAdapter.ClearBeforeFill = true;
-            // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // производительDataGridViewTextBoxColumn
-            // 
-            this.производительDataGridViewTextBoxColumn.DataPropertyName = "Производитель";
-            this.производительDataGridViewTextBoxColumn.HeaderText = "Производитель";
-            this.производительDataGridViewTextBoxColumn.Name = "производительDataGridViewTextBoxColumn";
-            // 
-            // материнскаяПлатаDataGridViewTextBoxColumn
-            // 
-            this.материнскаяПлатаDataGridViewTextBoxColumn.DataPropertyName = "Материнская плата";
-            this.материнскаяПлатаDataGridViewTextBoxColumn.HeaderText = "Материнская плата";
-            this.материнскаяПлатаDataGridViewTextBoxColumn.Name = "материнскаяПлатаDataGridViewTextBoxColumn";
-            // 
-            // оЗУDataGridViewTextBoxColumn
-            // 
-            this.оЗУDataGridViewTextBoxColumn.DataPropertyName = "ОЗУ";
-            this.оЗУDataGridViewTextBoxColumn.HeaderText = "ОЗУ";
-            this.оЗУDataGridViewTextBoxColumn.Name = "оЗУDataGridViewTextBoxColumn";
-            // 
-            // пЗУDataGridViewTextBoxColumn
-            // 
-            this.пЗУDataGridViewTextBoxColumn.DataPropertyName = "ПЗУ";
-            this.пЗУDataGridViewTextBoxColumn.HeaderText = "ПЗУ";
-            this.пЗУDataGridViewTextBoxColumn.Name = "пЗУDataGridViewTextBoxColumn";
-            // 
-            // блокПитанияDataGridViewTextBoxColumn
-            // 
-            this.блокПитанияDataGridViewTextBoxColumn.DataPropertyName = "Блок питания";
-            this.блокПитанияDataGridViewTextBoxColumn.HeaderText = "Блок питания";
-            this.блокПитанияDataGridViewTextBoxColumn.Name = "блокПитанияDataGridViewTextBoxColumn";
-            // 
-            // видеокартаDataGridViewTextBoxColumn
-            // 
-            this.видеокартаDataGridViewTextBoxColumn.DataPropertyName = "Видеокарта";
-            this.видеокартаDataGridViewTextBoxColumn.HeaderText = "Видеокарта";
-            this.видеокартаDataGridViewTextBoxColumn.Name = "видеокартаDataGridViewTextBoxColumn";
-            // 
-            // процессорDataGridViewTextBoxColumn
-            // 
-            this.процессорDataGridViewTextBoxColumn.DataPropertyName = "Процессор";
-            this.процессорDataGridViewTextBoxColumn.HeaderText = "Процессор";
-            this.процессорDataGridViewTextBoxColumn.Name = "процессорDataGridViewTextBoxColumn";
-            // 
-            // ценаDataGridViewTextBoxColumn
-            // 
-            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Цена";
-            this.ценаDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
-            // 
-            // гарантияDataGridViewTextBoxColumn
-            // 
-            this.гарантияDataGridViewTextBoxColumn.DataPropertyName = "Гарантия";
-            this.гарантияDataGridViewTextBoxColumn.HeaderText = "Гарантия";
-            this.гарантияDataGridViewTextBoxColumn.Name = "гарантияDataGridViewTextBoxColumn";
             // 
             // SaleComputersForm
             // 
@@ -313,12 +334,12 @@ namespace AIS_ComputerBYTE
             this.Text = "Продажи";
             this.Load += new System.EventHandler(this.SaleComputers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.computersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

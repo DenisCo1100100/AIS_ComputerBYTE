@@ -113,6 +113,8 @@ namespace AIS_ComputerBYTE
             this.clientsGridView.DataSource = this.clientsBindingSource;
             this.clientsGridView.Location = new System.Drawing.Point(12, 12);
             this.clientsGridView.Name = "clientsGridView";
+            this.clientsGridView.ReadOnly = true;
+            this.clientsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientsGridView.Size = new System.Drawing.Size(911, 363);
             this.clientsGridView.TabIndex = 14;
             this.clientsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsGridView_CellClick);
@@ -122,66 +124,77 @@ namespace AIS_ComputerBYTE
             this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
             this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
             this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // фамилияDataGridViewTextBoxColumn
             // 
             this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            this.фамилияDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // имяDataGridViewTextBoxColumn
             // 
             this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
             this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            this.имяDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // отчествоDataGridViewTextBoxColumn
             // 
             this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            this.отчествоDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // адресDataGridViewTextBoxColumn
             // 
             this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
             this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.адресDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // паспортDataGridViewTextBoxColumn
             // 
             this.паспортDataGridViewTextBoxColumn.DataPropertyName = "Паспорт";
             this.паспортDataGridViewTextBoxColumn.HeaderText = "Паспорт";
             this.паспортDataGridViewTextBoxColumn.Name = "паспортDataGridViewTextBoxColumn";
+            this.паспортDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаРегистрацииDataGridViewTextBoxColumn
             // 
             this.датаРегистрацииDataGridViewTextBoxColumn.DataPropertyName = "Дата регистрации";
             this.датаРегистрацииDataGridViewTextBoxColumn.HeaderText = "Дата регистрации";
             this.датаРегистрацииDataGridViewTextBoxColumn.Name = "датаРегистрацииDataGridViewTextBoxColumn";
+            this.датаРегистрацииDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // мобильныйТелефонDataGridViewTextBoxColumn
             // 
             this.мобильныйТелефонDataGridViewTextBoxColumn.DataPropertyName = "Мобильный телефон";
             this.мобильныйТелефонDataGridViewTextBoxColumn.HeaderText = "Мобильный телефон";
             this.мобильныйТелефонDataGridViewTextBoxColumn.Name = "мобильныйТелефонDataGridViewTextBoxColumn";
+            this.мобильныйТелефонDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // предоставитьСкидкуDataGridViewTextBoxColumn
             // 
             this.предоставитьСкидкуDataGridViewTextBoxColumn.DataPropertyName = "Предоставить скидку";
             this.предоставитьСкидкуDataGridViewTextBoxColumn.HeaderText = "Предоставить скидку";
             this.предоставитьСкидкуDataGridViewTextBoxColumn.Name = "предоставитьСкидкуDataGridViewTextBoxColumn";
+            this.предоставитьСкидкуDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // предпологаемыйМесяцDataGridViewTextBoxColumn
             // 
             this.предпологаемыйМесяцDataGridViewTextBoxColumn.DataPropertyName = "Предпологаемый месяц";
             this.предпологаемыйМесяцDataGridViewTextBoxColumn.HeaderText = "Предпологаемый месяц";
             this.предпологаемыйМесяцDataGridViewTextBoxColumn.Name = "предпологаемыйМесяцDataGridViewTextBoxColumn";
+            this.предпологаемыйМесяцDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // средняяЗарплатаDataGridViewTextBoxColumn
             // 
             this.средняяЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Средняя зарплата";
             this.средняяЗарплатаDataGridViewTextBoxColumn.HeaderText = "Средняя зарплата";
             this.средняяЗарплатаDataGridViewTextBoxColumn.Name = "средняяЗарплатаDataGridViewTextBoxColumn";
+            this.средняяЗарплатаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clientsBindingSource
             // 
