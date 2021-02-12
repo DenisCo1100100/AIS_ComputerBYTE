@@ -24,6 +24,7 @@ namespace AIS_ComputerBYTE
 
             FillUserDate();
             ProvidingAccses();
+            Application.OpenForms[0].Hide();
         }
 
         private void FillUserDate()
@@ -42,6 +43,7 @@ namespace AIS_ComputerBYTE
             if (LvlAccses == 2)
             {
                 registrationButton.Visible = false;
+                statistickButton.Visible = false;
             }
         }
         private void assortmentButton_Click(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace AIS_ComputerBYTE
 
         private void changeEmployee_Click(object sender, EventArgs e)
         {
+            Application.OpenForms[0].Show();
             Close();
         }
 
@@ -77,6 +80,11 @@ namespace AIS_ComputerBYTE
         private void salesForecastsButton_Click(object sender, EventArgs e)
         {
             new SalesForecastsForm().ShowDialog();
+        }
+
+        private void MainMenuForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms[0].Show();
         }
     }
 }

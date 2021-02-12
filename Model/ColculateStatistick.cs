@@ -23,7 +23,7 @@ namespace AIS_ComputerBYTE
         #endregion
 
         private int _wage;
-        private int _trustLvl;
+        private double _trustLvl;
         private int _profit;
         private int _newDiscount;
         private int _numberMonthPurch;
@@ -66,19 +66,22 @@ namespace AIS_ComputerBYTE
             _tableMenager.ExecuteRequest(request);
         }
 
-        private int ColculateTrustLVl(int toPay)
+        private double ColculateTrustLVl(int toPay)
         {
-            string request = $"SELECT Уровень_доверия FROM Employees";
-            string[] trustEmployees = _tableMenager.SelectInDB(request);
+            string request = $"SELECT COUNT(Уровень_доверия) FROM Employees";
+            string[] count = _tableMenager.SelectInDB(request);
 
-            int meanTrust = 0;
+            request = $"SELECT Уровень_доверия FROM Employees";
+            string[] trustEmployees = _tableMenager.SelectInDB(request, int.Parse(count[0]));
+
+            double meanTrust = 0;
             foreach (var trust in trustEmployees)
             {
-                meanTrust += int.Parse(trust);
+                meanTrust += double.Parse(trust);
             }
             meanTrust += (toPay * 2 / 100);
 
-            return meanTrust / (trustEmployees.Length + 1);
+            return meanTrust / (trustEmployees.Length + 1.0);
         }
 
         private int GetDiscount(int pasportNumber, int toPay)

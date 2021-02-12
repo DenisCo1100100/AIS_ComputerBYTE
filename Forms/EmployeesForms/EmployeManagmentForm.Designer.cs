@@ -30,6 +30,7 @@ namespace AIS_ComputerBYTE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeManagmentForm));
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -249,6 +250,7 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.assortmentButton);
             this.Controls.Add(this.employeesDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeManagmentForm";
             this.Text = "Управление сотрудниками";
             this.Load += new System.EventHandler(this.EmployeManagmentForm_Load);

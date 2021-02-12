@@ -16,30 +16,36 @@ namespace AIS_ComputerBYTE
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-            int discount = Convert.ToInt32(discountTextBox.Text);
+            try
+            {
+                int discount = Convert.ToInt32(discountTextBox.Text);
 
-            string cmdText = $"INSERT INTO Clients ([Фамилия], [Имя], [Отчество], [Адрес], [Паспорт], [Дата регистрации], [Мобильный телефон], [Предоставить скидку], [Предпологаемый месяц]) VALUES (" +
-                $"'" + lastNameTextBox.Text + "'," +
-                " '" + firstNameTextBox.Text + "'," +
-                " '" + patronymicTextBox.Text + "'," +
-                " '" + adressTextBox.Text + "'," +
-                " '" + pasportTextBox.Text + "'," +
-                " '" + DateTime.Now + "'," +
-                " '" + phoneTextBox.Text + "'," +
-                " '" + discount + "'," +
-                " '" + monthСomboBox.Text + "')";
+                string cmdText = $"INSERT INTO Clients ([Фамилия], [Имя], [Отчество], [Адрес], [Паспорт], [Дата регистрации], [Мобильный телефон], [Предоставить скидку], [Предпологаемый месяц]) VALUES (" +
+                    $"'" + lastNameTextBox.Text + "'," +
+                    " '" + firstNameTextBox.Text + "'," +
+                    " '" + patronymicTextBox.Text + "'," +
+                    " '" + adressTextBox.Text + "'," +
+                    " '" + pasportTextBox.Text + "'," +
+                    " '" + DateTime.Now + "'," +
+                    " '" + phoneTextBox.Text + "'," +
+                    " '" + discount + "'," +
+                    " '" + monthСomboBox.Text + "')";
 
-            TableMenager tableMenager = new TableMenager();
-            tableMenager.ExecuteRequest(cmdText);
 
-            MessageBox.Show("Готво!", "Внимание!");
-        }
+                new ColculateStatistick().AddClient(int.Parse(profitTextBox.Text));
 
-        private void AddingClientsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            new ColculateStatistick().AddClient(int.Parse(profitTextBox.Text));
-            DataGridViewControll gridViewControll = new DataGridViewControll();
-            gridViewControll.Update(DataGrid, "Clients");
+                TableMenager tableMenager = new TableMenager();
+                tableMenager.ExecuteRequest(cmdText);
+
+                DataGridViewControll gridViewControll = new DataGridViewControll();
+                gridViewControll.Update(DataGrid, "Clients");
+
+                MessageBox.Show("Готово!", "Внимание!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Проверьте введенные данные", "Ошибка");
+            }
         }
     }
 }

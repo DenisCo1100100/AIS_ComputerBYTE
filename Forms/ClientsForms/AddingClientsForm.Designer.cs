@@ -29,6 +29,7 @@ namespace AIS_ComputerBYTE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddingClientsForm));
             this.patronymicTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -311,9 +312,9 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.patronymicLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.lastNameLable);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddingClientsForm";
             this.Text = "Регистрация клиента";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddingClientsForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,6 +29,7 @@ namespace AIS_ComputerBYTE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationEmployeesForm));
             this.lastNameLable = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.patronymicLabel = new System.Windows.Forms.Label();
@@ -369,6 +370,7 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.lastNameLable);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrationEmployeesForm";
             this.Text = "Регистрация сотрудника";
             this.ResumeLayout(false);

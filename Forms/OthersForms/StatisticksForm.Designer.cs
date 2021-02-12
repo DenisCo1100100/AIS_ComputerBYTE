@@ -50,6 +50,7 @@ namespace AIS_ComputerBYTE
             System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticksForm));
             this.monthComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.monthChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -392,6 +393,7 @@ namespace AIS_ComputerBYTE
             this.ClientSize = new System.Drawing.Size(859, 496);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StatisticksForm";
             this.Text = "Статистика";
             ((System.ComponentModel.ISupportInitialize)(this.monthChart)).EndInit();

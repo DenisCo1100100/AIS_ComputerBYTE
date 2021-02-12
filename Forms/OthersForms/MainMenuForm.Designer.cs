@@ -46,6 +46,7 @@ namespace AIS_ComputerBYTE
             // 
             // clientsButton
             // 
+            this.clientsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clientsButton.BackColor = System.Drawing.Color.Transparent;
             this.clientsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.clientsButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -54,9 +55,9 @@ namespace AIS_ComputerBYTE
             this.clientsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clientsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.clientsButton.Location = new System.Drawing.Point(463, 293);
+            this.clientsButton.Location = new System.Drawing.Point(486, 316);
             this.clientsButton.Name = "clientsButton";
-            this.clientsButton.Size = new System.Drawing.Size(301, 60);
+            this.clientsButton.Size = new System.Drawing.Size(357, 60);
             this.clientsButton.TabIndex = 11;
             this.clientsButton.Text = "Клиенты";
             this.clientsButton.UseVisualStyleBackColor = false;
@@ -64,6 +65,7 @@ namespace AIS_ComputerBYTE
             // 
             // assortmentButton
             // 
+            this.assortmentButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.assortmentButton.BackColor = System.Drawing.Color.Transparent;
             this.assortmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.assortmentButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -72,9 +74,9 @@ namespace AIS_ComputerBYTE
             this.assortmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assortmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.assortmentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.assortmentButton.Location = new System.Drawing.Point(68, 293);
+            this.assortmentButton.Location = new System.Drawing.Point(44, 316);
             this.assortmentButton.Name = "assortmentButton";
-            this.assortmentButton.Size = new System.Drawing.Size(301, 60);
+            this.assortmentButton.Size = new System.Drawing.Size(357, 60);
             this.assortmentButton.TabIndex = 9;
             this.assortmentButton.Text = "Ассортимент";
             this.assortmentButton.UseVisualStyleBackColor = false;
@@ -90,18 +92,19 @@ namespace AIS_ComputerBYTE
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(458, -18);
+            this.groupBox1.Location = new System.Drawing.Point(446, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 180);
+            this.groupBox1.Size = new System.Drawing.Size(426, 180);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Пользователь";
             // 
             // userNameLable
             // 
+            this.userNameLable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userNameLable.AutoSize = true;
             this.userNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userNameLable.Location = new System.Drawing.Point(103, 49);
+            this.userNameLable.Location = new System.Drawing.Point(97, 49);
             this.userNameLable.Name = "userNameLable";
             this.userNameLable.Size = new System.Drawing.Size(54, 24);
             this.userNameLable.TabIndex = 1;
@@ -109,9 +112,10 @@ namespace AIS_ComputerBYTE
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(91, 97);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -125,7 +129,7 @@ namespace AIS_ComputerBYTE
             this.changeEmployee.BackColor = System.Drawing.Color.Transparent;
             this.changeEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changeEmployee.ForeColor = System.Drawing.Color.White;
-            this.changeEmployee.Location = new System.Drawing.Point(561, 165);
+            this.changeEmployee.Location = new System.Drawing.Point(573, 200);
             this.changeEmployee.Name = "changeEmployee";
             this.changeEmployee.Size = new System.Drawing.Size(171, 20);
             this.changeEmployee.TabIndex = 2;
@@ -134,24 +138,26 @@ namespace AIS_ComputerBYTE
             // 
             // registrationButton
             // 
+            this.registrationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.registrationButton.BackColor = System.Drawing.Color.Transparent;
             this.registrationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.registrationButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.registrationButton.FlatAppearance.BorderSize = 3;
             this.registrationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrationButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.registrationButton.Location = new System.Drawing.Point(12, 29);
+            this.registrationButton.Location = new System.Drawing.Point(44, 131);
             this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(301, 90);
+            this.registrationButton.Size = new System.Drawing.Size(357, 65);
             this.registrationButton.TabIndex = 13;
-            this.registrationButton.Text = "Управление сотрудниками";
+            this.registrationButton.Text = "Сотрудники";
             this.registrationButton.UseVisualStyleBackColor = false;
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // statistickButton
             // 
+            this.statistickButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.statistickButton.BackColor = System.Drawing.Color.Transparent;
             this.statistickButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.statistickButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -160,9 +166,9 @@ namespace AIS_ComputerBYTE
             this.statistickButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statistickButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.statistickButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.statistickButton.Location = new System.Drawing.Point(12, 137);
+            this.statistickButton.Location = new System.Drawing.Point(44, 31);
             this.statistickButton.Name = "statistickButton";
-            this.statistickButton.Size = new System.Drawing.Size(301, 60);
+            this.statistickButton.Size = new System.Drawing.Size(357, 65);
             this.statistickButton.TabIndex = 14;
             this.statistickButton.Text = "Статистика";
             this.statistickButton.UseVisualStyleBackColor = false;
@@ -170,6 +176,7 @@ namespace AIS_ComputerBYTE
             // 
             // salesForecastsButton
             // 
+            this.salesForecastsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.salesForecastsButton.BackColor = System.Drawing.Color.Transparent;
             this.salesForecastsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.salesForecastsButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -178,9 +185,9 @@ namespace AIS_ComputerBYTE
             this.salesForecastsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salesForecastsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.salesForecastsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.salesForecastsButton.Location = new System.Drawing.Point(463, 370);
+            this.salesForecastsButton.Location = new System.Drawing.Point(486, 417);
             this.salesForecastsButton.Name = "salesForecastsButton";
-            this.salesForecastsButton.Size = new System.Drawing.Size(301, 60);
+            this.salesForecastsButton.Size = new System.Drawing.Size(357, 60);
             this.salesForecastsButton.TabIndex = 15;
             this.salesForecastsButton.Text = "Прогнозы";
             this.salesForecastsButton.UseVisualStyleBackColor = false;
@@ -188,6 +195,7 @@ namespace AIS_ComputerBYTE
             // 
             // saleComputersButton
             // 
+            this.saleComputersButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.saleComputersButton.BackColor = System.Drawing.Color.Transparent;
             this.saleComputersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.saleComputersButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -196,9 +204,9 @@ namespace AIS_ComputerBYTE
             this.saleComputersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saleComputersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saleComputersButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.saleComputersButton.Location = new System.Drawing.Point(68, 370);
+            this.saleComputersButton.Location = new System.Drawing.Point(44, 417);
             this.saleComputersButton.Name = "saleComputersButton";
-            this.saleComputersButton.Size = new System.Drawing.Size(301, 60);
+            this.saleComputersButton.Size = new System.Drawing.Size(357, 60);
             this.saleComputersButton.TabIndex = 16;
             this.saleComputersButton.Text = "Продажи";
             this.saleComputersButton.UseVisualStyleBackColor = false;
@@ -210,7 +218,7 @@ namespace AIS_ComputerBYTE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(829, 449);
+            this.ClientSize = new System.Drawing.Size(899, 514);
             this.Controls.Add(this.saleComputersButton);
             this.Controls.Add(this.salesForecastsButton);
             this.Controls.Add(this.statistickButton);
@@ -224,6 +232,7 @@ namespace AIS_ComputerBYTE
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenuForm";
             this.Text = "Главное меню";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenuForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

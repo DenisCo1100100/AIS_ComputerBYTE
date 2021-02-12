@@ -29,6 +29,7 @@ namespace AIS_ComputerBYTE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddingComputerForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.priceTextBox = new System.Windows.Forms.TextBox();
@@ -380,6 +381,7 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.manufacturTextBox);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddingComputerForm";
             this.Text = "Добавление компьютера";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddingComputerForm_FormClosed);

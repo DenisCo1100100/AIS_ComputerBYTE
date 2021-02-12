@@ -35,8 +35,17 @@ namespace AIS_ComputerBYTE
 
         private void complite_Click(object sender, EventArgs e)
         {
-                pictureBox1.Image.Save($@"{Application.StartupPath}\ComputerImages\{ImageName}.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-
+            try
+            {
+                if (pictureBox1.Image != null)
+                {
+                    pictureBox1.Image.Save($@"{Application.StartupPath}\ComputerImages\{ImageName}.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                }
+                else
+                {
+                    MessageBox.Show("Добавте изображение", "Ошибка");
+                }
+            
                 string imageIndex = ImageName.ToString();
                 int price = Convert.ToInt32(priceTextBox.Text);
                 int guarante = Convert.ToInt32(guaranteTextBox.Text);
@@ -53,11 +62,16 @@ namespace AIS_ComputerBYTE
                     " '" + price + "'," +
                     " '" + guarante + "')";
 
-            TableMenager computersTable = new TableMenager();
-            computersTable.ExecuteRequest(request);
+                TableMenager computersTable = new TableMenager();
+                computersTable.ExecuteRequest(request);
 
-            MessageBox.Show("Компьютер добавлен!", "Готово");
-            this.Close();
+                MessageBox.Show("Компьютер добавлен!", "Готово");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Проверьте введенные данные", "Ошибка");
+            }
         }
 
         private void AddingComputerForm_FormClosed(object sender, FormClosedEventArgs e)

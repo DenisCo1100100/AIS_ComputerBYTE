@@ -30,6 +30,7 @@ namespace AIS_ComputerBYTE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssortmentForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.assortmentTable = new System.Windows.Forms.DataGridView();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -255,6 +256,7 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.assortmentTable);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssortmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ассортимент";

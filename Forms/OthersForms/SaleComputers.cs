@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AIS_ComputerBYTE
@@ -26,16 +27,22 @@ namespace AIS_ComputerBYTE
         #endregion
 
         public static SaleComputersForm saleComputers;
+        private DataGridViewControll _viewControll = new DataGridViewControll();
 
         public SaleComputersForm()
         {
             InitializeComponent();
 
             saleComputers = this;
+
+            _viewControll.Update(computersDataGridView, "Computers");
+            _viewControll.Update(clientsDataGridView, "Clients");
         }
 
         private void SaleComputers_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet3.Computers". При необходимости она может быть перемещена или удалена.
+            this.computersTableAdapter.Fill(this.computerByteDataBaseDataSet3.Computers);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet4.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.computerByteDataBaseDataSet4.Clients);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "computerByteDataBaseDataSet3.Computers". При необходимости она может быть перемещена или удалена.
@@ -51,15 +58,26 @@ namespace AIS_ComputerBYTE
                     throw new Exception();
                 }
 
-                Monufacterer = computersDataGridView[0, e.RowIndex].Value.ToString();
-                Motherboard = computersDataGridView[1, e.RowIndex].Value.ToString();
-                PowerSupply = computersDataGridView[4, e.RowIndex].Value.ToString();
-                VideoCard = computersDataGridView[5, e.RowIndex].Value.ToString();
-                CPU = computersDataGridView[6, e.RowIndex].Value.ToString();
-                OZU = computersDataGridView[2, e.RowIndex].Value.ToString();
-                PZU = computersDataGridView[3, e.RowIndex].Value.ToString();
-                Price = computersDataGridView[7, e.RowIndex].Value.ToString();
-                Guarante = computersDataGridView[8, e.RowIndex].Value.ToString();
+                int imageIndex = 0;
+                if (e.RowIndex >= 0 && computersDataGridView[0, e.RowIndex].Value.ToString() != "")
+                {
+                    imageIndex = Convert.ToInt32(computersDataGridView[0, e.RowIndex].Value);
+                }
+
+                if (imageIndex >= 2)
+                {
+                    pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\ComputerImages\{imageIndex}.jpeg");
+                }
+
+                Monufacterer = computersDataGridView[1, e.RowIndex].Value.ToString();
+                Motherboard = computersDataGridView[2, e.RowIndex].Value.ToString();
+                PowerSupply = computersDataGridView[5, e.RowIndex].Value.ToString();
+                VideoCard = computersDataGridView[6, e.RowIndex].Value.ToString();
+                CPU = computersDataGridView[7, e.RowIndex].Value.ToString();
+                OZU = computersDataGridView[3, e.RowIndex].Value.ToString();
+                PZU = computersDataGridView[4, e.RowIndex].Value.ToString();
+                Price = computersDataGridView[8, e.RowIndex].Value.ToString();
+                Guarante = computersDataGridView[9, e.RowIndex].Value.ToString();
                 
                 selectCompLabel.Text = $"Выбор компьютера: {Monufacterer}";
             }
@@ -67,6 +85,7 @@ namespace AIS_ComputerBYTE
             {
                 MessageBox.Show("Нельзя выбрать!", "Внимание!");
             }
+
         }
 
         private void clientsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -30,13 +30,10 @@ namespace AIS_ComputerBYTE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
             this.deleteButton = new System.Windows.Forms.Button();
             this.registrationButton = new System.Windows.Forms.Button();
             this.clientsGridView = new System.Windows.Forms.DataGridView();
-            this.backButton = new System.Windows.Forms.Button();
-            this.computerByteDataBaseDataSet2 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters.ClientsTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +45,13 @@ namespace AIS_ComputerBYTE
             this.предоставитьСкидкуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.предпологаемыйМесяцDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.средняяЗарплатаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.computerByteDataBaseDataSet2 = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2();
+            this.backButton = new System.Windows.Forms.Button();
+            this.clientsTableAdapter = new AIS_ComputerBYTE.ComputerByteDataBaseDataSet2TableAdapters.ClientsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -115,39 +116,6 @@ namespace AIS_ComputerBYTE
             this.clientsGridView.Size = new System.Drawing.Size(911, 363);
             this.clientsGridView.TabIndex = 14;
             this.clientsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsGridView_CellClick);
-            // 
-            // backButton
-            // 
-            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.backButton.FlatAppearance.BorderSize = 3;
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backButton.Location = new System.Drawing.Point(709, 391);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(214, 75);
-            this.backButton.TabIndex = 15;
-            this.backButton.Text = "Назад";
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // computerByteDataBaseDataSet2
-            // 
-            this.computerByteDataBaseDataSet2.DataSetName = "ComputerByteDataBaseDataSet2";
-            this.computerByteDataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.computerByteDataBaseDataSet2;
-            // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -215,6 +183,39 @@ namespace AIS_ComputerBYTE
             this.средняяЗарплатаDataGridViewTextBoxColumn.HeaderText = "Средняя зарплата";
             this.средняяЗарплатаDataGridViewTextBoxColumn.Name = "средняяЗарплатаDataGridViewTextBoxColumn";
             // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "Clients";
+            this.clientsBindingSource.DataSource = this.computerByteDataBaseDataSet2;
+            // 
+            // computerByteDataBaseDataSet2
+            // 
+            this.computerByteDataBaseDataSet2.DataSetName = "ComputerByteDataBaseDataSet2";
+            this.computerByteDataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.backButton.FlatAppearance.BorderSize = 3;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.backButton.Location = new System.Drawing.Point(709, 391);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(214, 75);
+            this.backButton.TabIndex = 15;
+            this.backButton.Text = "Назад";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
+            // 
             // ClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,12 +226,13 @@ namespace AIS_ComputerBYTE
             this.Controls.Add(this.clientsGridView);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.registrationButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientsForm";
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.ClientsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerByteDataBaseDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

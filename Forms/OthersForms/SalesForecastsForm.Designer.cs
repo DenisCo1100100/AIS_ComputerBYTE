@@ -29,12 +29,13 @@ namespace AIS_ComputerBYTE
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForecastsForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -125,25 +126,25 @@ namespace AIS_ComputerBYTE
             this.forecastsChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.forecastsChart.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.White;
-            legend4.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.forecastsChart.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.forecastsChart.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.White;
+            legend1.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.forecastsChart.Legends.Add(legend1);
             this.forecastsChart.Location = new System.Drawing.Point(6, 58);
             this.forecastsChart.Name = "forecastsChart";
             this.forecastsChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series4.BorderWidth = 4;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            series4.Label = "%";
-            series4.Legend = "Legend1";
-            series4.MarkerSize = 10;
-            series4.Name = "Вероятность покупки";
-            this.forecastsChart.Series.Add(series4);
+            series1.BorderWidth = 4;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            series1.Label = "%";
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 10;
+            series1.Name = "Вероятность покупки";
+            this.forecastsChart.Series.Add(series1);
             this.forecastsChart.Size = new System.Drawing.Size(881, 428);
             this.forecastsChart.TabIndex = 12;
             this.forecastsChart.Text = "chart1";
@@ -205,22 +206,22 @@ namespace AIS_ComputerBYTE
             this.forecastProfitChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.forecastProfitChart.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.White;
-            legend3.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.forecastProfitChart.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.forecastProfitChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.White;
+            legend2.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.forecastProfitChart.Legends.Add(legend2);
             this.forecastProfitChart.Location = new System.Drawing.Point(6, 62);
             this.forecastProfitChart.Name = "forecastProfitChart";
             this.forecastProfitChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series3.BorderWidth = 4;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Возможная прибыль";
-            this.forecastProfitChart.Series.Add(series3);
+            series2.BorderWidth = 4;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Возможная прибыль";
+            this.forecastProfitChart.Series.Add(series2);
             this.forecastProfitChart.Size = new System.Drawing.Size(881, 424);
             this.forecastProfitChart.TabIndex = 13;
             this.forecastProfitChart.Text = "chart1";
@@ -232,6 +233,7 @@ namespace AIS_ComputerBYTE
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(925, 542);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalesForecastsForm";
             this.Text = "Прогнозы продаж";
             this.tabControl1.ResumeLayout(false);
